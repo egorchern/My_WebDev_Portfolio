@@ -1,7 +1,7 @@
 var navButtonState = 0;
-$(document).ready(function(){
-    $("#forTransform").hide();
-})
+
+
+
 
 
 function displayMobileNavMenu(){
