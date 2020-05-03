@@ -5,6 +5,11 @@
         <link rel="icon" href="Assets/icon.png">
         <link rel=stylesheet href="styles.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script
+         src="https://code.jquery.com/jquery-3.5.0.js"
+         integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
+         crossorigin="anonymous"></script>
+        <script type = "text/javascript" src="Scripts/myscript.js"></script>
         <title>Egor Chernyshev's portfolio</title>
     </head>
     <body>
@@ -15,15 +20,33 @@
             </div>
         </header>
         <nav class="row" id="navContainer">
-            <div class="col-lg-2 col-sm-0 col-md-1 col-0" ></div>
-            <div class="col-lg-8 col-sm-12 col-md-10 col-12" id="nav-grid">
+            <div class="col-lg-2  col-md-1 " ></div>
+            <div class="col-lg-8  col-md-10 " id="nav-grid">
                 <a class="nav-item" href="#">A little bit about myself</a>
                 <a class="nav-item" href="#">Relevant experiences</a>
                 <a class="nav-item" href="#">Projects</a>
                 <a class="nav-item" href="#">Academics</a>
                 <a class="nav-item" href="#">Contacts</a>
             </div>
-            <div class="col-lg-2 col-sm-0 col-md-1 col-0" ></div>
+            <div class="col-lg-2  col-md-1 " ></div>
         </nav>
+        <div class="row" id="mobile_nav">
+            
+            <div><img src="Assets/mobile_nav_menu.png" onclick="displayMobileNavMenu()"></div>
+            
+        
+            
+        </div>
+        <div class="row" id="forTransform">
+            <div class="col-1"></div>
+            <div id="reactive_grid" class="col-10">
+                <a class="nav-item2" href="#">A little bit about myself</a>
+                <a class="nav-item2" href="#">Relevant experiences</a>
+                <a class="nav-item2" href="#">Projects</a>
+                <a class="nav-item2" href="#">Academics</a>
+                <a class="nav-item2" href="#">Contacts</a>
+            </div>
+            <div class="col-1"></div>
+        </div>
     </body>
 </html>
