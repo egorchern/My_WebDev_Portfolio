@@ -59,3 +59,9 @@ body {
         font-size:1.7vw;
     }
 }
+@media(max-width:550px){
+    .nav-item{
+        font-size:11px;
+        padding:10px
+    }
+}
