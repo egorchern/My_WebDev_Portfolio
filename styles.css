@@ -177,3 +177,9 @@ html, body, .book-title {
 }
 
 /*# sourceMappingURL=styles.css.map */
+
+.book-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
