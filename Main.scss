@@ -1,9 +1,8 @@
 $mainContentFontFamily: sans-serif;
-$mainContentFontSize: calc(11px + 0.5vw);
+$mainContentFontSize: calc(11.5px + 0.35vw);
+$mainContentHeadingFontSize:calc(16px + 0.65vw);
 
-*{
-    font-family: $mainContentFontFamily;
-} 
+
 img {
     width:100%;
     height:100%;
@@ -99,9 +98,9 @@ body {
     
 }
 
-@media(min-width:601px){
+@media(min-width:701px){
     .nav-item{
-        font-size:calc(12px + 1vw);
+        font-size:calc(11.5px + 1vw);
     }
     #mobile_nav{
         display:none;
@@ -111,7 +110,7 @@ body {
     }
 }
 
-@media(max-width:600px){
+@media(max-width:700px){
     #navContainer{
         display:none;
     }
@@ -125,7 +124,8 @@ body {
 
 #main {
     margin-top:40px;
-    margin-left: 5.3vw;
+    margin-left: 5.2vw;
+    margin-bottom:200px;
 }
 
 #MainGrid {
@@ -134,7 +134,7 @@ body {
 }
 
 .MainGrid-item {
-    padding:10px;
+    padding:14px;
     text-align: center;
     
     border: 4px solid blue;
@@ -142,14 +142,14 @@ body {
     font-size: $mainContentFontSize;
 }
 
-@media(max-width:600px){
+@media(max-width:700px){
     #MainGrid{
         grid-template-columns: auto;
     }
 }
-@media(min-width:601px){
+@media(min-width:701px){
     #MainGrid{
-        grid-template-columns: 30% auto;
+        grid-template-columns: 28.5% auto;
         
     }
     #aboutMyself{
@@ -173,4 +173,54 @@ body {
 
 #active {
     text-decoration: underline;
+}
+*{
+    font-family: $mainContentFontFamily;
+} 
+p {
+    margin-left:4px;
+    text-align:start;
+}
+
+.alignCenter {
+    text-align: center;
+}
+
+.books-grid {
+    margin-top:15px;
+    margin-left:auto;
+    margin-right:auto;
+    display:grid;
+    grid-row-gap: 2.8vh;
+    grid-column-gap: 1vw;
+    grid-template-columns: 35% auto;
+    grid-template-rows: auto auto auto;
+    max-width:85%;
+}
+
+.books-grid-img {
+    max-width:auto;
+    
+    
+    
+}
+
+.book-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.Heading {
+    text-align:center;
+    font-size:$mainContentHeadingFontSize;
+}
+
+.books-grid-item {
+    position:relative;
+}
+
+html, body, .book-title {
+    height: 100%;
 }
