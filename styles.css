@@ -91,21 +91,21 @@ body {
 }
 #main {
   margin-top: 40px;
-  margin-left: 5.2vw;
+  margin-left: 5vw;
   margin-bottom: 200px;
 }
 
 #MainGrid {
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 15px;
 }
 
 .MainGrid-item {
-  padding: 14px;
+  padding: 12px;
   text-align: center;
   border: 4px solid blue;
   border-radius: 25px;
-  font-size: calc(11.5px + 0.35vw);
+  font-size: calc(11.5px + 0.30vw);
 }
 
 @media (max-width: 700px) {
@@ -176,10 +176,10 @@ html, body, .book-title {
   height: 100%;
 }
 
-/*# sourceMappingURL=styles.css.map */
-
 .book-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+/*# sourceMappingURL=styles.css.map */
