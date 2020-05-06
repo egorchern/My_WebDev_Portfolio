@@ -33,6 +33,7 @@ body {
 #nav-grid {
   display: grid;
   grid-template-columns: auto auto auto auto auto;
+  grid-column-gap: 4.5px;
 }
 
 #mobile_nav {
@@ -131,7 +132,8 @@ body {
 }
 
 #active {
-  text-decoration: underline;
+  border-bottom: 3px solid black;
+  padding-bottom: 0px;
 }
 
 * {
@@ -189,5 +191,7 @@ html, body, .book-title {
   border-radius: 25px;
   font-size: calc(11.5px + 0.30vw);
 }
+
+/*# sourceMappingURL=styles.css.map */
 
 /*# sourceMappingURL=styles.css.map */
