@@ -220,15 +220,17 @@ html, body, .book-title {
   }
 }
 .project_cards-grid-item {
-  padding: 5px;
+  padding: 8px;
   width: 100%;
   background-color: white;
   font-size: calc(11.5px + 0.25vw);
-  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 #cards {
   margin-top: 5vh;
+  margin-bottom: 200px;
 }
 
 .thumbnail {
@@ -276,7 +278,8 @@ html, body, .book-title {
 }
 
 .viewProjectBtnContainer {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  margin-top: auto;
   display: flex;
   justify-content: center;
   align-items: center;
