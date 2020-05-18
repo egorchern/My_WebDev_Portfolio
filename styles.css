@@ -1,3 +1,74 @@
+#mobile_nav {
+  display: none;
+}
+
+@media (min-width: 701px) {
+  .nav-item {
+    font-size: calc(11.5px + 1vw);
+  }
+
+  #mobile_nav {
+    display: none;
+  }
+
+  #forTransform {
+    display: none;
+  }
+
+  #MainGrid {
+    grid-template-columns: 28.5% auto;
+  }
+
+  #aboutMyself {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  #project_cards-grid {
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+  }
+
+  #detailedPrjGrid {
+    grid-template-rows: 15fr 15fr 15fr 15fr 40fr;
+    grid-template-columns: 48fr 52fr;
+    grid-column-gap: 10px;
+  }
+
+  #prjPic {
+    grid-row-start: 1;
+    grid-row-end: 5;
+  }
+
+  #descr {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+@media (max-width: 700px) {
+  #navContainer {
+    display: none;
+  }
+
+  #mobile_nav {
+    display: block;
+  }
+
+  #project_cards-grid {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto;
+  }
+
+  #MainGrid {
+    grid-template-columns: auto;
+  }
+
+  #detailedPrjGrid {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto auto;
+  }
+}
 #detailedPrjGrid, .project_cards-grid-item, .MainGrid-item {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
   border: 2px solid rgba(0, 0, 0, 0.125);
@@ -47,7 +118,6 @@ body {
   width: 50px;
   margin-left: 8vw;
   margin-top: 3.5vw;
-  display: none;
 }
 
 #forTransform {
@@ -76,28 +146,6 @@ body {
   text-decoration: none;
 }
 
-@media (min-width: 701px) {
-  .nav-item {
-    font-size: calc(11.5px + 1vw);
-  }
-
-  #mobile_nav {
-    display: none;
-  }
-
-  #forTransform {
-    display: none;
-  }
-}
-@media (max-width: 700px) {
-  #navContainer {
-    display: none;
-  }
-
-  #mobile_nav {
-    display: block;
-  }
-}
 #main {
   margin-top: 40px;
   margin-left: 5vw;
@@ -116,22 +164,6 @@ body {
   font-size: calc(11.5px + 0.25vw);
 }
 
-@media (max-width: 700px) {
-  #MainGrid {
-    grid-template-columns: auto;
-  }
-}
-@media (min-width: 701px) {
-  #MainGrid {
-    grid-template-columns: 28.5% auto;
-  }
-
-  #aboutMyself {
-    grid-column-start: 2;
-    grid-row-start: 1;
-    grid-row-end: 3;
-  }
-}
 #profilePic {
   max-width: 100px;
   margin-left: auto;
@@ -207,18 +239,6 @@ html, body, .book-title {
   padding: 30px;
 }
 
-@media (min-width: 701px) {
-  #project_cards-grid {
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto;
-  }
-}
-@media (max-width: 700px) {
-  #project_cards-grid {
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto auto;
-  }
-}
 .project_cards-grid-item {
   padding: 8px;
   width: 100%;
@@ -286,10 +306,7 @@ html, body, .book-title {
 
 #detailedPrjGrid {
   display: grid;
-  grid-template-rows: 15% 15% 15% 15% 40%;
-  grid-template-columns: 40% auto;
   padding: 30px;
-  grid-column-gap: 10px;
   grid-row-gap: 20px;
 }
 
@@ -300,19 +317,10 @@ html, body, .book-title {
 }
 
 .detailedPrjGrid-item {
+  font-size: calc(11.5px + 0.25vw);
   padding: 5px;
   background-color: green;
   overflow-wrap: break-word;
-}
-
-#prjPic {
-  grid-row-start: 1;
-  grid-row-end: 5;
-}
-
-#descr {
-  grid-column-start: 1;
-  grid-column-end: 3;
 }
 
 /*# sourceMappingURL=styles.css.map */
