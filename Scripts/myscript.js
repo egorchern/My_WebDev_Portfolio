@@ -26,3 +26,6 @@ function displayMobileNavMenu(){
     }
 }
 
+function expandProject(prjID){
+   
+}

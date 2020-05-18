@@ -1,4 +1,4 @@
-.project_cards-grid-item, .MainGrid-item {
+#detailedPrjGrid, .project_cards-grid-item, .MainGrid-item {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
   border: 2px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.45rem;
@@ -230,7 +230,6 @@ html, body, .book-title {
 
 #cards {
   margin-top: 5vh;
-  margin-bottom: 200px;
 }
 
 .thumbnail {
@@ -243,7 +242,7 @@ html, body, .book-title {
   position: relative;
   padding: 10px 20px;
   background: white;
-  font-size: 28px;
+  font-size: calc(18px + 0.4vw);
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
   transition: all 0.8s;
@@ -283,6 +282,37 @@ html, body, .book-title {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#detailedPrjGrid {
+  display: grid;
+  grid-template-rows: 15% 15% 15% 15% 40%;
+  grid-template-columns: 40% auto;
+  padding: 30px;
+  grid-column-gap: 10px;
+  grid-row-gap: 20px;
+}
+
+#expandedPrj {
+  margin-bottom: 100px;
+  font-size: calc(11.5px + 0.25vw);
+  padding: 32px;
+}
+
+.detailedPrjGrid-item {
+  padding: 5px;
+  background-color: green;
+  overflow-wrap: break-word;
+}
+
+#prjPic {
+  grid-row-start: 1;
+  grid-row-end: 5;
+}
+
+#descr {
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 /*# sourceMappingURL=styles.css.map */
