@@ -31,14 +31,14 @@
   }
 
   #detailedPrjGrid {
-    grid-template-rows: 15fr 15fr 15fr 15fr 40fr;
-    grid-template-columns: 48fr 52fr;
-    grid-column-gap: 10px;
+    grid-template-rows: 1fr 2fr 1fr auto;
+    grid-template-columns: 60fr 40fr;
+    grid-column-gap: 25px;
   }
 
   #prjPic {
     grid-row-start: 1;
-    grid-row-end: 5;
+    grid-row-end: 4;
   }
 
   #descr {
@@ -66,10 +66,10 @@
 
   #detailedPrjGrid {
     grid-template-columns: auto;
-    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
   }
 }
-#detailedPrjGrid, .project_cards-grid-item, .MainGrid-item {
+#forCoolBorders, .featureGrid p, #detailedPrjGrid, .project_cards-grid-item, .MainGrid-item {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
   border: 2px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.45rem;
@@ -307,7 +307,6 @@ html, body, .book-title {
 #detailedPrjGrid {
   display: grid;
   padding: 30px;
-  grid-row-gap: 20px;
 }
 
 #expandedPrj {
@@ -318,9 +317,36 @@ html, body, .book-title {
 
 .detailedPrjGrid-item {
   font-size: calc(11.5px + 0.25vw);
-  padding: 5px;
-  background-color: green;
   overflow-wrap: break-word;
+}
+
+.featureGrid {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  width: 80%;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.featureGrid p {
+  padding: 8px;
+  margin: 10px;
+}
+
+#forCoolBorders {
+  padding: 5px;
+}
+
+picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#descr {
+  word-wrap: break-word;
 }
 
 /*# sourceMappingURL=styles.css.map */
