@@ -32,7 +32,7 @@
 
   #detailedPrjGrid {
     grid-template-rows: 1fr 2fr 1fr auto;
-    grid-template-columns: 60fr 40fr;
+    grid-template-columns: 58fr 42fr;
     grid-column-gap: 25px;
   }
 
@@ -69,10 +69,22 @@
     grid-template-rows: auto auto auto auto auto;
   }
 }
-#forCoolBorders, .featureGrid p, #detailedPrjGrid, .project_cards-grid-item, .MainGrid-item {
+#implemented, .featureGrid p, #detailedPrjGrid, .project_cards-grid-item, .MainGrid-item {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
   border: 2px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.45rem;
+}
+
+.detailedPrjGrid-item p, .featureGrid p, #implemented {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  /*
+    Introduced in IE 10.
+    See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+  */
+  -ms-user-select: none;
+  user-select: none;
 }
 
 img {
@@ -305,7 +317,7 @@ html, body, .book-title {
 }
 
 #detailedPrjGrid {
-  display: grid;
+  display: none;
   padding: 30px;
 }
 
@@ -335,7 +347,7 @@ html, body, .book-title {
   margin: 10px;
 }
 
-#forCoolBorders {
+#implemented {
   padding: 5px;
 }
 
