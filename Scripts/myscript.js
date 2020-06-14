@@ -25,7 +25,12 @@ function displayMobileNavMenu(){
         })
     }
 }
-
+$(document).ready(function(){
+    $('.close').click(function(){
+        $('.modall').hide();
+        $('body').css("overflow-y","auto");
+    })
+})
 function expandProject(prjID){
     
     var str = prjID;
@@ -36,8 +41,10 @@ function expandProject(prjID){
     var descriptions = [
         "Chess",
         "Something"
-    ]
-    $(document).ready(new function(){
+    ];
+    
+    $(document).ready(function(){
+        $('.modall').css("display","flex");
         $("#implemented").html(implementedStrings[num]);
         var featureList = featuresForProjects[num];
         $(".featureGrid").empty();
@@ -48,8 +55,12 @@ function expandProject(prjID){
         $("#githubLink").attr("href",githubLinks[num]);
         $("#descr").empty();
         $("#descr").append("<p>" + descriptions[num] + "</p>");
-        $("#detailedPrjGrid").css("display","grid");
+        $('body').css("overflow-y","hidden");
+        
     })
+                      
+                      
+    
     
     
 

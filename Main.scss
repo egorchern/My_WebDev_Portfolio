@@ -1,0 +1,420 @@
+@use "mediaQueries";
+%coolBorders{
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+    border: 2px solid rgba(0,0,0,.125);
+    border-radius: .45rem;
+}
+%unselectable{
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+
+   /*
+     Introduced in IE 10.
+     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+   */
+   -ms-user-select: none;
+   user-select: none;
+}
+$mainContentFont : calc(11.5px + 0.25vw);
+
+
+
+
+
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#head-item {
+  max-height: calc(70px + 5vw);
+}
+
+.nav-item {
+  color: black;
+  text-align: center;
+  transition-duration: 0.3s;
+  padding: 1vw;
+}
+
+#navContainer {
+  
+  margin-top: 2vw;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: hsl(0%, 0%, 99.5%);
+}
+
+.nav-item:hover {
+  color: white;
+  background-color: black;
+  text-decoration: none;
+}
+
+#nav-grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-column-gap: 4.5px;
+  
+}
+
+#mobile_nav {
+  width: 50px;
+  margin-left: 8vw;
+  margin-top: 3.5vw;
+  
+}
+
+#forTransform {
+  font-size: 4vw;
+  margin-left: 3.5vw;
+  margin-top: 10px;
+  
+  display:none;
+}
+
+#reactive_grid {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-columns: auto;
+  grid-row-gap:5px;
+}
+
+.nav-item2 {
+  color: black;
+  transition-duration: 0.3s;
+  padding: 1vw;
+}
+
+.nav-item2:hover {
+  color: white;
+  background-color: black;
+  text-decoration: none;
+}
+
+
+#main {
+  margin-top: 40px;
+  margin-left: 5vw;
+  margin-bottom: 200px;
+}
+
+#MainGrid {
+  display: grid;
+  grid-gap: 15px;
+}
+
+.MainGrid-item {
+  padding: 12px;
+  text-align: center;
+  @extend %coolBorders;
+  background-color:white;
+  font-size: calc(11.5px + 0.25vw);
+}
+
+
+#profilePic {
+  max-width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#active {
+  border-bottom: 3px solid black;
+  padding-bottom: 0px;
+}
+
+* {
+  font-family: sans-serif;
+    
+}
+
+p {
+  margin-left: 4px;
+  text-align: start;
+}
+
+.alignCenter {
+  text-align: center;
+}
+
+.books-grid {
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-row-gap: 2.8vh;
+  grid-column-gap: 1vw;
+  grid-template-columns: 35% auto;
+  grid-template-rows: auto auto auto;
+  max-width: 85%;
+}
+
+.books-grid-img {
+  max-width: auto;
+}
+
+.Heading {
+  text-align: center;
+  font-size: calc(16px + 0.65vw);
+}
+
+.books-grid-item {
+  position: relative;
+}
+
+html, body, .book-title {
+  height: 100%;
+}
+
+.book-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#ExperienceContainer {
+  padding: 12px;
+  text-align: center;
+  border: 4px solid blue;
+  border-radius: 25px;
+  font-size: calc(11.5px + 0.25vw);
+}
+
+/*# sourceMappingURL=styles.css.map */
+
+#project_cards-grid {
+    display:grid;
+    grid-column-gap: 2vw;
+    grid-row-gap: 40px;
+    padding:30px;
+    
+    
+}
+
+
+.project_cards-grid-item {
+    padding:8px;
+    width:100%;
+    @extend %coolBorders;
+    background-color:white;
+    font-size: $mainContentFont;
+    display:flex;
+    flex-direction: column;
+}
+
+
+
+#cards {
+    margin-top:5vh;
+    margin-bottom: 5vh;
+    
+}
+
+.thumbnail {
+    
+    width:100%;
+    
+    margin-bottom: 15px;
+    
+    
+    
+}
+.btn{
+cursor:pointer;
+	position:relative;
+	padding:10px 20px;
+	background:white;
+	font-size:calc(18px + 0.4vw);
+	border-top-right-radius:10px;
+	border-bottom-left-radius:10px;
+	transition:all 0.8s;
+	&:after,&:before{
+		content:" ";
+		width:10px;
+		height:10px;
+		position:absolute;
+		border :0px solid #fff;
+		transition:all 0.8s;
+		}
+	&:after{
+		top:-1px;
+		left:-1px;
+		border-top:4px solid black;
+		border-left:4px solid black;
+	}
+	&:before{
+		bottom:-1px;
+		right:-1px;
+		border-bottom:4px solid black;
+		border-right:4px solid black;
+	}
+	&:hover{
+		border-top-right-radius:0px;
+	   border-bottom-left-radius:0px;
+		// background:rgba(0,0,0,.5);
+		// color:white;
+		&:before,&:after{
+			
+			width:100%;
+			height:100%;
+			// border-color:white;
+		}
+	}
+}
+
+.viewProjectBtnContainer{
+	
+	margin-bottom: 10px;
+    margin-top:auto;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+    
+}
+
+
+
+
+
+
+
+
+#detailedPrjGrid {
+    
+    @extend %coolBorders;
+    
+    
+    padding:30px;
+    
+    
+    
+}
+
+#expandedPrj {
+    
+    
+    
+}
+
+.detailedPrjGrid-item {
+    font-size:$mainContentFont;
+    
+    
+    overflow-wrap: break-word;
+
+}
+
+
+
+ul {
+    
+}
+
+
+
+.featureGrid {
+    display:flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    width:80%;
+    flex-wrap:wrap; 
+    margin:auto;
+}
+
+
+
+.featureGrid p {
+    padding:8px;
+    margin:10px;
+    @extend %coolBorders;
+    
+}
+
+#implemented {
+    @extend %coolBorders;
+    @extend %unselectable;
+    padding:5px;
+}
+
+picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#descr {
+    
+    word-wrap: break-word;
+}
+
+.featureGrid p{
+   @extend %unselectable;
+}
+
+.detailedPrjGrid-item p {
+    @extend %unselectable;
+}
+
+.modall {
+    padding: 70px 0;
+    flex-direction: column;
+    display:none;
+    position:fixed;
+    z-index: 1;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    align-items: center;
+    
+    overflow-y:auto;
+    
+}
+
+.modall-content {
+    
+    width: 80%;
+    max-width:1000px;
+    background-color: white;
+    display:grid;
+    
+    animation-name: zoom;
+    animation-duration: 0.5s;
+}
+
+@keyframes zoom{
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+.close{
+    position:fixed;
+    top:15px;
+    right:35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+
+.close:hover, .close:focus{
+    color:#bbb;
+    text-decoration: none;
+    cursor:pointer;
+    
+}
+
+
+#prjPic img {
+    object-fit: fill;
+}

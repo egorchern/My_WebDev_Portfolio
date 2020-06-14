@@ -1,0 +1,86 @@
+#mobile_nav{
+    display:none;
+}
+
+@media (min-width: 701px) {
+  .nav-item {
+    font-size: calc(11.5px + 1vw);
+  }
+
+  #mobile_nav {
+    display: none;
+  }
+
+  #forTransform {
+    display: none;
+  }
+    
+  #MainGrid {
+    grid-template-columns: 28.5% auto;
+  }
+
+  #aboutMyself {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+    
+  #project_cards-grid{
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto auto;
+        
+    }
+    
+    #detailedPrjGrid{
+        grid-template-rows:1fr 2fr 1fr auto;
+        grid-template-columns: 58fr 42fr;
+        grid-column-gap:25px;
+        
+    }
+    #prjPic {
+    grid-row-start:1;
+    grid-row-end:4;
+    
+    
+    }
+
+    #descr {
+        grid-column-start:1;
+        grid-column-end:3;
+        
+        
+    }
+    
+
+}
+
+
+@media (max-width: 700px) {
+  #navContainer {
+    display: none;
+  }
+
+    #mobile_nav{
+        display:block;
+    }
+  #project_cards-grid{
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto auto;
+    }
+  #MainGrid {
+    grid-template-columns: auto;
+  }
+  #detailedPrjGrid{
+        grid-template-columns: auto;
+        grid-template-rows:  auto auto auto auto auto;
+    }
+}
+
+
+
+
+
+
+
+
+
