@@ -1,193 +1,204 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="icon" href="Assets/icon.png">
-        <link rel=stylesheet href="styles.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <script
-         src="https://code.jquery.com/jquery-3.5.0.js"
-         integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
-         crossorigin="anonymous"></script>
-        <script type = "text/javascript" src="Scripts/myscript.js"></script>
-        <title>Egor Chernyshev's portfolio</title>
-    </head>
-    <body>
-        <header class="row">
-            <div class="col-12" id ="head-item">
-                <img src="Assets/header.jpg">
-                
-            </div>
-        </header>
-        <nav class="row" id="navContainer">
-            <div class="col-lg-2 col-md-1 col-1" ></div>
-            <div class="col-lg-8 col-md-10 col-10" id="nav-grid">
-                <a class="nav-item" href="index.html" >A little bit about myself</a>
-                <a class="nav-item" href="Relevant_Experience.html">Relevant experiences</a>
-                <a class="nav-item" href="Projects.html" id="active">Projects</a>
-                <a class="nav-item" href="Academics.html">Academics</a>
-                <a class="nav-item" href="Contacts.html">Contacts</a>
-            </div>
-            <div class="col-lg-2 col-md-1 col-1" ></div>
-        </nav>
-        <div class="row" id="mobile_nav">
-            
-            <div><img src="Assets/mobile_nav_menu.png" onclick="displayMobileNavMenu()"></div>
-            
-        
-            
-        </div>
-        <div class="row" id="forTransform">
-            
-            <div id="reactive_grid" class="col-11">
-                <a class="nav-item2" href="index.html" >A little bit about myself</a>
-                <a class="nav-item2" href="Relevant_Experience.html">Relevant experiences</a>
-                <a class="nav-item2" href="Projects.html" id="active">Projects</a>
-                <a class="nav-item2" href="Academics.html">Academics</a>
-                <a class="nav-item2" href="Contacts.html">Contacts</a>
-            </div>
-            
-            
-        </div>
-        <div class="row" id="cards">
-            <div class="col-1"></div>
-            <div class="col-10" id="project_cards-grid">
-                
-                <div class="project_cards-grid-item">
-                    <div class="thumbnail">
-                        <img src="Assets/Prj1Preview.PNG">
-                    </div>
-                    <p class="alignCenter">A chess app with different game modes and an AI. Made in C# and WPF</p>
-                    
-                    <div class="viewProjectBtnContainer">
-                        <span class="btn" id="prj0" onclick="expandProject(this.id)">Expand</span>
-                    </div>
-                </div>
-                <div class="project_cards-grid-item">
-                    <div class="thumbnail">
-                        <img src="Assets/prj2Preview.PNG">
-                    </div>
-                    <p class="alignCenter">A bookmarker website which utilizes cookies to store bookmars permanently. Made with basic web dev kit</p>
-                    <div class="viewProjectBtnContainer">
-                        <span class="btn" id="prj1" onclick="expandProject(this.id)">Expand</span>
-                    </div>
-                    
-                </div>
-                <div class="project_cards-grid-item">
-                    <div class="thumbnail">
-                        <img src="Assets/Prj1Preview.PNG">
-                    </div>
-                    <p class="alignCenter">Something else</p>
-                    <div class="viewProjectBtnContainer">
-                        <span class="btn" id="prj2" onclick="expandProject(this.id)">Expand</span>
-                    </div>
-                    
-                </div>
-                <div class="project_cards-grid-item">
-                    <div class="thumbnail">
-                        <img src="Assets/Prj1Preview.PNG">
-                    </div>
 
-                    <p class="alignCenter">Something else</p>
-                    <div class="viewProjectBtnContainer">
-                        <span class="btn" id="prj3" onclick="expandProject(this.id)">Expand</span>
-                    </div>
-                </div>
-                <div class="project_cards-grid-item">
-                    <div class="thumbnail">
-                        <img src="Assets/Prj1Preview.PNG">
-                    </div>
-                    <p class="alignCenter">My chess program</p>
-                    <div class="viewProjectBtnContainer">
-                        <span class="btn" id="prj4" onclick="expandProject(this.id)">Expand</span>
-                    </div>
-                </div>
-                <div class="project_cards-grid-item">
-                    <div class="thumbnail">
-                        <img src="Assets/Prj1Preview.PNG">
-                    </div>
-                    <p class="alignCenter">Something else</p>
-                    <div class="viewProjectBtnContainer">
-                        <span class="btn" id="prj5" onclick="expandProject(this.id)">Expand</span>
-                    </div>
-                    
-                </div>
-                <div class="project_cards-grid-item">
-                    <div class="thumbnail">
-                        <img src="Assets/Prj1Preview.PNG">
-                    </div>
-                    <p class="alignCenter">Something else</p>
-                    <div class="viewProjectBtnContainer">
-                        <span class="btn" id="prj6" onclick="expandProject(this.id)">Expand</span>
-                    </div>
-                    
-                </div>
-                <div class="project_cards-grid-item">
-                    <div class="thumbnail">
-                        <img src="Assets/Prj1Preview.PNG">
-                    </div>
+<head>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-                    <p class="alignCenter">Something else</p>
-                    <div class="viewProjectBtnContainer">
-                        <span class="btn" id="prj7" onclick="expandProject(this.id)">Expand</span>
-                    </div>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-108190186-2');
+
+    </script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="icon" href="Assets/icon.png">
+    <link rel=stylesheet href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="Scripts/myscript.js"></script>
+    <title>Egor Chernyshev's portfolio</title>
+</head>
+
+<body>
+    <header class="row">
+        <div class="col-12" id="head-item">
+            <img src="Assets/header.jpg">
+
+        </div>
+    </header>
+    <nav class="row" id="navContainer">
+        <div class="col-lg-2 col-md-1 col-1"></div>
+        <div class="col-lg-8 col-md-10 col-10" id="nav-grid">
+            <a class="nav-item" href="index.html">A little bit about myself</a>
+            <a class="nav-item" href="Relevant_Experience.html">Relevant experiences</a>
+            <a class="nav-item" href="Projects.html" id="active">Projects</a>
+            <a class="nav-item" href="Academics.html">Academics</a>
+            <a class="nav-item" href="Contacts.html">Contacts</a>
+        </div>
+        <div class="col-lg-2 col-md-1 col-1"></div>
+    </nav>
+    <div class="row" id="mobile_nav">
+
+        <div><img src="Assets/mobile_nav_menu.png" onclick="displayMobileNavMenu()"></div>
+
+
+
+    </div>
+    <div class="row" id="forTransform">
+
+        <div id="reactive_grid" class="col-11">
+            <a class="nav-item2" href="index.html">A little bit about myself</a>
+            <a class="nav-item2" href="Relevant_Experience.html">Relevant experiences</a>
+            <a class="nav-item2" href="Projects.html" id="active">Projects</a>
+            <a class="nav-item2" href="Academics.html">Academics</a>
+            <a class="nav-item2" href="Contacts.html">Contacts</a>
+        </div>
+
+
+    </div>
+    <div class="row" id="cards">
+        <div class="col-1"></div>
+        <div class="col-10" id="project_cards-grid">
+
+            <div class="project_cards-grid-item">
+                <div class="thumbnail">
+                    <img src="Assets/Prj1Preview.PNG">
+                </div>
+                <p class="alignCenter">A chess app with different game modes and an AI. Made in C# and WPF</p>
+
+                <div class="viewProjectBtnContainer">
+                    <span class="btn" id="prj0" onclick="expandProject(this.id)">Expand</span>
                 </div>
             </div>
-            <div class="col-1" ></div>
-                    
-                    
-                    
-                    
-                    
-                    
-                <!-- 
+            <div class="project_cards-grid-item">
+                <div class="thumbnail">
+                    <img src="Assets/prj2Preview.PNG">
+                </div>
+                <p class="alignCenter">A bookmarker website which utilizes cookies to store bookmars permanently. Made with basic web dev kit</p>
+                <div class="viewProjectBtnContainer">
+                    <span class="btn" id="prj1" onclick="expandProject(this.id)">Expand</span>
+                </div>
+
+            </div>
+            <div class="project_cards-grid-item">
+                <div class="thumbnail">
+                    <img src="Assets/Prj1Preview.PNG">
+                </div>
+                <p class="alignCenter">Something else</p>
+                <div class="viewProjectBtnContainer">
+                    <span class="btn" id="prj2" onclick="expandProject(this.id)">Expand</span>
+                </div>
+
+            </div>
+            <div class="project_cards-grid-item">
+                <div class="thumbnail">
+                    <img src="Assets/Prj1Preview.PNG">
+                </div>
+
+                <p class="alignCenter">Something else</p>
+                <div class="viewProjectBtnContainer">
+                    <span class="btn" id="prj3" onclick="expandProject(this.id)">Expand</span>
+                </div>
+            </div>
+            <div class="project_cards-grid-item">
+                <div class="thumbnail">
+                    <img src="Assets/Prj1Preview.PNG">
+                </div>
+                <p class="alignCenter">My chess program</p>
+                <div class="viewProjectBtnContainer">
+                    <span class="btn" id="prj4" onclick="expandProject(this.id)">Expand</span>
+                </div>
+            </div>
+            <div class="project_cards-grid-item">
+                <div class="thumbnail">
+                    <img src="Assets/Prj1Preview.PNG">
+                </div>
+                <p class="alignCenter">Something else</p>
+                <div class="viewProjectBtnContainer">
+                    <span class="btn" id="prj5" onclick="expandProject(this.id)">Expand</span>
+                </div>
+
+            </div>
+            <div class="project_cards-grid-item">
+                <div class="thumbnail">
+                    <img src="Assets/Prj1Preview.PNG">
+                </div>
+                <p class="alignCenter">Something else</p>
+                <div class="viewProjectBtnContainer">
+                    <span class="btn" id="prj6" onclick="expandProject(this.id)">Expand</span>
+                </div>
+
+            </div>
+            <div class="project_cards-grid-item">
+                <div class="thumbnail">
+                    <img src="Assets/Prj1Preview.PNG">
+                </div>
+
+                <p class="alignCenter">Something else</p>
+                <div class="viewProjectBtnContainer">
+                    <span class="btn" id="prj7" onclick="expandProject(this.id)">Expand</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-1"></div>
+
+
+
+
+
+
+        <!-- 
                     1725 cut-of for big picture
                 !-->
-                
-        </div>
-        <div class="modall">
-            
-            <div id="detailedPrjGrid" class="modall-content">
-                <div class="detailedPrjGrid-item" id="prjPic">
-                   
-                    <img src="Assets/prj1Big.PNG" id="expandedPrj-pic">
-                    
-                </div>
-                
-                
-                
-                <div class="detailedPrjGrid-item">
-                    <p class="alignCenter" style="font-size: calc(16px + 0.65vw)">Implemented using:</p>
-                    <p class="alignCenter" id="implemented"></p>
-                </div>
-                
-                <div class="detailedPrjGrid-item"  >
-                    <p class="alignCenter" style="font-size: calc(16px + 0.65vw)" >Features:</p>
-                    <div class="featureGrid">
-                            
-                    </div>
-                    
-                        
-                    
-                </div>
-                
-                <div class="detailedPrjGrid-item" >
-                    <p class="alignCenter" style="font-size: calc(16px + 0.65vw); margin-top:20px;">GitHub link:</p>
-                    <div style="max-width: 100px; margin:auto">
-                        <a href="https://github.com/egorchern/Project_ChessWithInterface" target="_blank" id="githubLink">
-                            <img src="Assets/GitHubLogo.png">
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-                <span class="close">&times;</span>
-                
-                <div class="detailedPrjGrid-item" id="descr" style="margin-top:40px">
-                   
-                </div>
+
+    </div>
+    <div class="modall">
+
+        <div id="detailedPrjGrid" class="modall-content">
+            <div class="detailedPrjGrid-item" id="prjPic">
+
+                <img src="Assets/prj1Big.PNG" id="expandedPrj-pic">
+
             </div>
-            
+
+
+
+            <div class="detailedPrjGrid-item">
+                <p class="alignCenter" style="font-size: calc(16px + 0.65vw)">Implemented using:</p>
+                <p class="alignCenter" id="implemented"></p>
+            </div>
+
+            <div class="detailedPrjGrid-item">
+                <p class="alignCenter" style="font-size: calc(16px + 0.65vw)">Features:</p>
+                <div class="featureGrid">
+
+                </div>
+
+
+
+            </div>
+
+            <div class="detailedPrjGrid-item">
+                <p class="alignCenter" style="font-size: calc(16px + 0.65vw); margin-top:20px;">GitHub link:</p>
+                <div style="max-width: 100px; margin:auto">
+                    <a href="https://github.com/egorchern/Project_ChessWithInterface" target="_blank" id="githubLink">
+                        <img src="Assets/GitHubLogo.png">
+                    </a>
+
+                </div>
+
+            </div>
+            <span class="close">&times;</span>
+
+            <div class="detailedPrjGrid-item" id="descr" style="margin-top:40px">
+
+            </div>
         </div>
-    </body >
+
+    </div>
+</body>
+
 </html>

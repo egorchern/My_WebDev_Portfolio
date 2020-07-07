@@ -39,7 +39,7 @@ img {
   color: black;
   text-align: center;
   transition-duration: 0.3s;
-  padding: 1vw;
+  padding: 0.8vw;
 }
 
 #navContainer {
@@ -457,4 +457,8 @@ tr:nth-child(odd) {
     width:80%;
     max-width: 950px;
     margin:auto;
+}
+
+table {
+    table-layout: fixed;
 }
