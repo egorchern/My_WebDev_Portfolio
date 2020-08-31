@@ -12,92 +12,93 @@
         gtag('config', 'UA-108190186-2');
 
     </script>
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        
         <link rel="icon" href="Assets/icon.png">
-        <link rel=stylesheet href="styles.css">
+        <link rel=stylesheet href="Main.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <script
-         src="https://code.jquery.com/jquery-3.5.0.js"
-         integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
-         crossorigin="anonymous"></script>
+        
         <script type = "text/javascript" src="Scripts/myscript.js"></script>
         <title>Egor Chernyshev's portfolio</title>
     </head>
     <body>
-        <header class="row">
-            <div class="col-12" id ="head-item">
-                <img src="Assets/header.jpg">
-                
-            </div>
-        </header>
-        <nav class="row" id="navContainer">
-            <div class="col-lg-2 col-md-1 col-1" ></div>
-            <div class="col-lg-8 col-md-10 col-10" id="nav-grid">
-                <a class="nav-item" href="index.html" >A little bit about myself</a>
-                <a class="nav-item" href="Relevant_Experience.html">Relevant experiences</a>
-                <a class="nav-item" href="Projects.html">Projects</a>
-                <a class="nav-item" href="Academics.html" id="active">Academics</a>
-                <a class="nav-item" href="Contacts.html">Contacts</a>
-            </div>
-            <div class="col-lg-2 col-md-1 col-1" ></div>
-        </nav>
-        <div class="row" id="mobile_nav">
-            
-            <div><img src="Assets/mobile_nav_menu.png" onclick="displayMobileNavMenu()"></div>
-            
+        <div id="wrapper">
+            <nav id="navigation">
+                <ul id="nav-list">
+                    <li id="About_myself"><span class="active">About myself</span></li>
+                    <li id="Relevant_experience"><span>Relevant experience</span></li>
+                    <li id="Projects"><span>Projects</span></li>
+                    <li id="Academics"><span>Academics</span></li>
+                    <li id="Contacts"><span>Contacts</span></li>
+                </ul>
+            </nav id="navigation">
+            <main>
+                <div id="main">
+                    <div class="page_item">
+                        <div>
+                            <div class="horizontal-aligner">
+
+                                <div class="dropright" style="margin-bottom: 10px">
+                                    <button class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">GCSEs</button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <p class="alignCenter">Name: Broad Oak High School</p>
+                                        <p class="alignCenter">Studied: 2015-2018</p>
+                                        <img src="Assets/high_school_1.jpg">
+                                    </div class="dropdown-menu">
+                                </div>
+                            </div>
+                            
+                            <table  class="table table-bordered academics-table">
+                                <thead>
+                                    <tr><th>Subject</th><th>Year Taken</th><th>Grade</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Mathematics</td><td>2018</td><td>8</td></tr>
+                                    <tr><td>English Language</td><td>2018</td><td>6</td></tr>
+                                    <tr><td>English Literature</td><td>2018</td><td>8</td></tr>
+                                    <tr><td>Law</td><td>2017</td><td>B</td></tr>
+                                    <tr><td>Spanish</td><td>2018</td><td>7</td></tr>
+                                    <tr><td>Food Preparation and Nutrition</td><td>2018</td><td>6</td></tr>
+                                    <tr><td>History</td><td>2018</td><td>8</td></tr>
+                                    <tr><td>Russian</td><td>2016</td><td>A*</td></tr>
+                                    <tr><td>Cambridge National Certificate in ICT</td><td>2018</td><td>M2</td></tr>
+                                    <tr><td>Combined Science: Trilogy</td><td>2018</td><td>8 8</td></tr>
+                                </tbody>
+                                
+                            </table>
+                        </div>
+                        <div style='margin-top:10px'>
+                            <div class="horizontal-aligner">
+
+                                <div class="dropright" style="margin-bottom: 10px">
+                                    <button class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">A-Levels</button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <p class="alignCenter">Name: Bury College</p>
+                                        <p class="alignCenter">Studied: 2018-2020</p>
+                                        <img src="Assets/bury_college_1.jpg">
+                                    </div class="dropdown-menu">
+                                </div>
+                            </div>
+                            <table  class="table table-bordered academics-table" style="margin-bottom: 10px">
+                                <thead>
+                                    <tr><th>Subject</th><th>Year Taken</th><th>Grade</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Mathematics</td><td>2020</td><td>A*</td></tr>
+                                    <tr><td>Further Mathematics</td><td>2020</td><td>A</td></tr>
+                                    <tr><td>Accounting</td><td>2020</td><td>A*</td></tr>
+                                    <tr><td>Computer Science</td><td>2020</td><td>A*</td></tr>
+                                </tbody>
+                                
+                            </table>
+                        </div>
+                    </div>
+                </div id="main">
+            </main>       
+        </div>
         
-            
-        </div>
-        <div class="row" id="forTransform">
-            
-            <div id="reactive_grid" class="col-11">
-                <a class="nav-item2" href="index.html">A little bit about myself</a>
-                <a class="nav-item2" href="Relevant_Experience.html">Relevant experiences</a>
-                <a class="nav-item2" href="Projects.html">Projects</a>
-                <a class="nav-item2" href="Academics.html" id="active">Academics</a>
-                <a class="nav-item2" href="Contacts.html">Contacts</a>
-            </div>
-            
-            
-        </div>
-        <div class="row" id="main">
-            
-            <div class="col-lg-11 col-11" id="ExperienceContainer">
-                <div >
-                    <p class="Heading">GCSE</p>
-                    <table id="gcse-table" class="table  table-bordered table-hover">
-                        <tr><th>Subject</th><th>Year Taken</th><th>Grade</th></tr>
-                        <tr><td>Mathematics</td><td>2018</td><td>8</td></tr>
-                        <tr><td>English Language</td><td>2018</td><td>6</td></tr>
-                        <tr><td>English Literature</td><td>2018</td><td>8</td></tr>
-                        <tr><td>Law</td><td>2017</td><td>B</td></tr>
-                        <tr><td>Spanish</td><td>2018</td><td>7</td></tr>
-                        <tr><td>Food Preparation and Nutrition</td><td>2018</td><td>6</td></tr>
-                        <tr><td>History</td><td>2018</td><td>8</td></tr>
-                        <tr><td>Russian</td><td>2016</td><td>A*</td></tr>
-                        <tr><td>Cambridge National Certificate in ICT</td><td>2018</td><td>M2</td></tr>
-                        <tr><td>Combined Science: Trilogy</td><td>2018</td><td>8 8</td></tr>
-                    </table>
-                </div>
-                <div style='margin-top:10px'>
-                    <p class="Heading">A-Levels</p>
-                    <table id="a_level-table" class="table  table-bordered table-hover">
-                        <tr><th>Subject</th><th>Year Taken</th><th>Grade</th></tr>
-                        <tr><td>Mathematics</td><td>2020</td><td>A</td></tr>
-                        <tr><td>Further Mathematics</td><td>2020</td><td>B</td></tr>
-                        <tr><td>Accounting</td><td>2020</td><td>A</td></tr>
-                        <tr><td>Computer Science</td><td>2020</td><td>A</td></tr>
-                    </table>
-                </div>
-                    
-                    
-                    
-                    
-                    
-                    
-                
-                </div>
-                <div class="col-1"></div>      
-        </div>
     </body>
 </html>

@@ -13,11 +13,14 @@
         gtag('config', 'UA-108190186-2');
 
     </script>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <link rel="icon" href="Assets/icon.png">
-    <link rel=stylesheet href="styles.css">
+    <link rel=stylesheet href="Main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
+    
     <script type="text/javascript" src="Scripts/myscript.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108190186-2"></script>
@@ -27,120 +30,99 @@
 </head>
 
 <body>
-    <header class="row">
-        <div class="col-12" id="head-item">
-            <img src="Assets/header.jpg">
+    <div id = "wrapper">
 
-        </div>
-    </header>
-    <nav class="row" id="navContainer">
-        <div class="col-lg-2 col-md-1 col-1"></div>
-        <div class="col-lg-8 col-md-10 col-10" id="nav-grid">
-            <a class="nav-item" href="index.html" id="active">A little bit about myself</a>
-            <a class="nav-item" href="Relevant_Experience.html">Relevant experiences</a>
-            <a class="nav-item" href="Projects.html">Projects</a>
-            <a class="nav-item" href="Academics.html">Academics</a>
-            <a class="nav-item" href="Contacts.html">Contacts</a>
-        </div>
-        <div class="col-lg-2 col-md-1 col-1"></div>
-    </nav>
-    <div class="row" id="mobile_nav">
+    
+        
 
-        <div><img src="Assets/mobile_nav_menu.png" onclick="displayMobileNavMenu()"></div>
+        <nav id="navigation">
+            <ul id="nav-list">
+                <li id="About_myself"><span class="active">About myself</span></li>
+                <li id="Relevant_experience"><span>Relevant experience</span></li>
+                <li id="Projects"><span>Projects</span></li>
+                <li id="Academics"><span>Academics</span></li>
+                <li id="Contacts"><span>Contacts</span></li>
+            </ul>
+        </nav id="navigation">
+        <main >
+            <div id="main">
+                <div id="MainGrid">
+                    <div class="MainGrid-item page_item">
+                        <div id="profilePic">
+                            <img src="Assets/ProfilePic.png">
 
-
-
-    </div>
-    <div class="row" id="forTransform">
-
-        <div id="reactive_grid" class="col-11">
-            <a class="nav-item2" href="index.html" id="active">A little bit about myself</a>
-            <a class="nav-item2" href="Relevant_Experience.html">Relevant experiences</a>
-            <a class="nav-item2" href="Projects.html">Projects</a>
-            <a class="nav-item2" href="Academics.html">Academics</a>
-            <a class="nav-item2" href="Contacts.html">Contacts</a>
-        </div>
-
-
-    </div>
-    <div class="row" id="main">
-
-
-        <div class="col-lg-11 col-11" id="MainGrid">
-            <div class="MainGrid-item">
-                <div id="profilePic">
-                    <img src="Assets/ProfilePic.png">
-
-                </div>
-                <p class="alignCenter">Mr. Egor Chernyshev</p>
-                <p>Currently, I am a studying A-Levels at Bury College.<br>
-                    Specifically I am studying: Computer science, Mathematics, Further Mathematics and Accounting.
-                    <br>
-                    I aspire to get a career in web development as a full-stack developer.
-                </p>
-            </div>
+                        </div>
+                        <p class="alignCenter">Mr. Egor Chernyshev</p>
+                        <p>Currently, I am a studying A-Levels at Bury College.<br>
+                            Specifically I am studying: Computer science, Mathematics, Further Mathematics and Accounting.
+                            <br>
+                            I aspire to get a career in web development as a full-stack developer.
+                        </p>
+                    </div>
 
 
 
 
-            <div class="MainGrid-item">
-                <p class="Heading">My favourite books:</p>
-                <div class="books-grid">
-                    <div class="books-grid-item">
+                    <div class="MainGrid-item page_item">
+                        <p class="Heading">My favourite books:</p>
+                        <div class="books-grid">
+                            <div class="books-grid-item">
 
-                        <div class="books-grid-img">
-                            <img src="Assets/witcherIcon.jpg">
+                                <div class="books-grid-img">
+                                    <img src="Assets/witcherIcon.jpg">
+                                </div>
+                            </div>
+
+                            <div class="books-grid-item">
+                                <div class="book-title">
+                                    <p class="alignCenter">The Witcher Series</p>
+                                </div>
+
+
+                            </div>
+                            <div class="books-grid-item">
+                                <div class="books-grid-img">
+                                    <img src="Assets/1984Icon.jpg">
+                                </div>
+                            </div>
+                            <div class="books-grid-item">
+                                <div class="book-title">
+                                    <p class="alignCenter">1984</p>
+                                </div>
+
+
+                            </div>
+                            <div class="books-grid-item">
+                                <div class="books-grid-img">
+                                    <img src="Assets/BraveNewWorldIcon.jpg">
+                                </div>
+                            </div>
+                            <div class="books-grid-item">
+                                <div class="book-title">
+                                    <p class="alignCenter">Brave New World</p>
+                                </div>
+
+
+                            </div>
+
                         </div>
                     </div>
 
-                    <div class="books-grid-item">
-                        <div class="book-title">
-                            <p class="alignCenter">The Witcher Series</p>
-                        </div>
-
-
-                    </div>
-                    <div class="books-grid-item">
-                        <div class="books-grid-img">
-                            <img src="Assets/1984Icon.jpg">
-                        </div>
-                    </div>
-                    <div class="books-grid-item">
-                        <div class="book-title">
-                            <p class="alignCenter">1984</p>
-                        </div>
-
+                    <div class="MainGrid-item page_item" id="aboutMyself">
+                        <p class="Heading">About myself:</p>
+                        <br>
+                        <p>When I was in year 11, I didn't know which A-Levels to pick and what I am going to do in the future as a profession. And one day, roughly in the middle of the academic year, we started doing our game projects in our ICT course. I watched some tutorials on Gamemaker and quickly grew in love with it. It was then that I experienced the joy of overcoming some coding problems and seeing how the seeds of my labour paid off, making the computer bend to your will. I was then filled with other ideas such as making websites and AI's. Though at the time I didn't have enough experience to implement those ideas. I talked with my ICT teacher extensively about that and he was very supportive saying that I would definitely enjoy A-Level Computer Science. That is how I got in love with programming and went on to study CS in College. </p>
+                        <br>
+                        <p>After enrolling at Bury College, we were introduced to C#. It was very different from my python which was my first programming language. Nevertheless, I've got the hang of basic features and went on to practice some primitive coding problems on Codewars (Website with programming questions of variant difficulty). Towards the end of my first year of college, I got the opportunity to participate in Manchester College's Creative Arts competition. I describe my experience with this event extensively in my "Relevant experience" section. Skipping forward to March 2020, A-Level exams were canceled and the countrywide lockdown began in the UK. After hearing that the university of Harvard has made the majority of their online courses free I've enrolled at CS50 Web Development course. Since then I've learned a lot about fundamentals and some advanced staff of Web Development. In a way, I was happy about the lockdown, since I had an opportunity to study a course that would otherwise cost $1350 but I am getting it for free!</p>
+                        <br>
+                        <p>However people need some balance between being productive and relaxing, and I've got a range of hobbies to help me with that. I play chess mostly online but on a day when me and my close friend can meet up, we play for hours and hours, trying to best each other mentally. I used to play semi-professionaly while I was in my native country, but upon migrating to UK I couldn't find any local tournaments and side tracked to some other sports. Speaking of sports, I used to play in basketball in my highschool as part of the backup roster. I only got to play in an official match once, but it was super fun and I think I made a decent contribution towards our victory as well as improving my team communication ability. I also enjoy playing video games, especially I like simulation/strategy type of games, like Total War series where you take control of a huge army and can turn the tide of battle with masterful plans and manevuers, even when severely outnumbered. When I play those kind of games, I feel like I am having fun and enhancing my decision making skills at the same time.
+                        </p>
 
                     </div>
-                    <div class="books-grid-item">
-                        <div class="books-grid-img">
-                            <img src="Assets/BraveNewWorldIcon.jpg">
-                        </div>
-                    </div>
-                    <div class="books-grid-item">
-                        <div class="book-title">
-                            <p class="alignCenter">Brave New World</p>
-                        </div>
-
-
-                    </div>
-
                 </div>
             </div>
-
-            <div class="MainGrid-item" id="aboutMyself">
-                <p class="Heading">About myself:</p>
-                <br>
-                <p>When I was in year 11, I didn't know which A-Levels to pick and what I am going to do in the future as a profession. And one day, roughly in the middle of the academic year, we started doing our game projects in our ICT course. I watched some tutorials on Gamemaker and quickly grew in love with it. It was then that I experienced the joy of overcoming some coding problems and seeing how the seeds of my labour paid off, making the computer bend to your will. I was then filled with other ideas such as making websites and AI's. Though at the time I didn't have enough experience to implement those ideas. I talked with my ICT teacher extensively about that and he was very supportive saying that I would definitely enjoy A-Level Computer Science. That is how I got in love with programming and went on to study CS in College. </p>
-                <br>
-                <p>After enrolling at Bury College, we were introduced to C#. It was very different from my python which was my first programming language. Nevertheless, I've got the hang of basic features and went on to practice some primitive coding problems on Codewars (Website with programming questions of variant difficulty). Towards the end of my first year of college, I got the opportunity to participate in Manchester College's Creative Arts competition. I describe my experience with this event extensively in my "Relevant experience" section. Skipping forward to March 2020, A-Level exams were canceled and the countrywide lockdown began in the UK. After hearing that the university of Harvard has made the majority of their online courses free I've enrolled at CS50 Web Development course. Since then I've learned a lot about fundamentals and some advanced staff of Web Development. In a way, I was happy about the lockdown, since I had an opportunity to study a course that would otherwise cost $1350 but I am getting it for free!</p>
-                <br>
-                <p>However people need some balance between being productive and relaxing, and I've got a range of hobbies to help me with that. I play chess mostly online but on a day when me and my close friend can meet up, we play for hours and hours, trying to best each other mentally. I used to play semi-professionaly while I was in my native country, but upon migrating to UK I couldn't find any local tournaments and side tracked to some other sports. Speaking of sports, I used to play in basketball in my highschool as part of the backup roster. I only got to play in an official match once, but it was super fun and I think I made a decent contribution towards our victory as well as improving my team communication ability. I also enjoy playing video games, especially I like simulation/strategy type of games, like Total War series where you take control of a huge army and can turn the tide of battle with masterful plans and manevuers, even when severely outnumbered. When I play those kind of games, I feel like I am having fun and enhancing my decision making skills at the same time.
-                </p>
-
-            </div>
-        </div>
-        <div class="col-lg-1 col-0"></div>
+            
+        </main>
     </div>
 </body>
 
