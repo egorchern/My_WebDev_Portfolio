@@ -1,5 +1,5 @@
 var slide_animation_duration = "0.8s";
-
+let slide_show_index = 0;
 
 $(function () {
     
@@ -7,12 +7,13 @@ $(function () {
         load_content(this.id);
     });
     bind_left_slide_animation("#main");
+    
 });
 
 function load_content(id){
     let content_to_load = ``;
-    
-    $('#main').empty();
+    $('.modall').remove();
+    $('#main').remove();
     $('#nav-list > li > span').removeClass("active");
     $(`#${id} > span`).addClass("active");
     if(id === "About_myself"){
@@ -100,7 +101,164 @@ function load_content(id){
 
     }
     else if(id === "Projects"){
+        let projects_content = `
+        <div id="main">
+            <div class="row" id="cards">
+                
+                <div style="width:90%" id="project_cards-grid">
 
+                    <div class="project_cards-grid-item">
+                        <div class="thumbnail">
+                            <img src="Assets/Prj1Preview.PNG">
+                        </div>
+                        <p class="alignCenter">A chess app with different game modes and an AI. Made in C# and WPF</p>
+
+                        <div class="viewProjectBtnContainer">
+                            <span class="btn-expand" id="prj0" onclick="expandProject(this.id)">Expand</span>
+                        </div>
+                    </div>
+                    <div class="project_cards-grid-item">
+                        <div class="thumbnail">
+                            <img src="Assets/prj2Preview.PNG">
+                        </div>
+                        <p class="alignCenter">A bookmarker website which utilizes cookies to store bookmars permanently. Made with basic web dev kit</p>
+                        <div class="viewProjectBtnContainer">
+                            <span class="btn-expand" id="prj1" onclick="expandProject(this.id)">Expand</span>
+                        </div>
+
+                    </div>
+                    <div class="project_cards-grid-item">
+                        <div class="thumbnail">
+                            <img src="Assets/Prj1Preview.PNG">
+                        </div>
+                        <p class="alignCenter">Something else</p>
+                        <div class="viewProjectBtnContainer">
+                            <span class="btn-expand" id="prj2" onclick="expandProject(this.id)">Expand</span>
+                        </div>
+
+                    </div>
+                    <div class="project_cards-grid-item">
+                        <div class="thumbnail">
+                            <img src="Assets/Prj1Preview.PNG">
+                        </div>
+
+                        <p class="alignCenter">Something else</p>
+                        <div class="viewProjectBtnContainer">
+                            <span class="btn-expand" id="prj3" onclick="expandProject(this.id)">Expand</span>
+                        </div>
+                    </div>
+                    <div class="project_cards-grid-item">
+                        <div class="thumbnail">
+                            <img src="Assets/Prj1Preview.PNG">
+                        </div>
+                        <p class="alignCenter">My chess program</p>
+                        <div class="viewProjectBtnContainer">
+                            <span class="btn-expand" id="prj4" onclick="expandProject(this.id)">Expand</span>
+                        </div>
+                    </div>
+                    <div class="project_cards-grid-item">
+                        <div class="thumbnail">
+                            <img src="Assets/Prj1Preview.PNG">
+                        </div>
+                        <p class="alignCenter">Something else</p>
+                        <div class="viewProjectBtnContainer">
+                            <span class="btn-expand" id="prj5" onclick="expandProject(this.id)">Expand</span>
+                        </div>
+
+                    </div>
+                    <div class="project_cards-grid-item">
+                        <div class="thumbnail">
+                            <img src="Assets/Prj1Preview.PNG">
+                        </div>
+                        <p class="alignCenter">Something else</p>
+                        <div class="viewProjectBtnContainer">
+                            <span class="btn-expand" id="prj6" onclick="expandProject(this.id)">Expand</span>
+                        </div>
+
+                    </div>
+                    <div class="project_cards-grid-item">
+                        <div class="thumbnail">
+                            <img src="Assets/Prj1Preview.PNG">
+                        </div>
+
+                        <p class="alignCenter">Something else</p>
+                        <div class="viewProjectBtnContainer">
+                            <span class="btn-expand" id="prj7" onclick="expandProject(this.id)">Expand</span>
+                        </div>
+                    </div>
+                </div>
+                
+
+
+
+
+
+
+                <!-- 
+                            1725 cut-of for big picture
+                        !-->
+
+            </div>
+            
+        </div>
+        <div class="modall">
+
+            <div id="detailedPrjGrid" class="modall-content">
+                
+
+                
+                <div class="slide-show-container detailedPrjGrid-item" id="my-slide-show">
+                    <div class="slide-show-image-container">
+                        <div class="right-slide-btn slide-show-btn">❯</div>
+                        <div class="left-slide-btn slide-show-btn">❮</div>
+                        <img>
+                    </div>
+                    <div class="slide-show-dots-container">
+                        
+                    </div>
+                    
+                    
+                </div>
+                
+
+
+
+                <div class="detailedPrjGrid-item">
+                    <p class="alignCenter" style="font-size: calc(16px + 0.65vw)">Implemented using:</p>
+                    <p class="alignCenter" id="implemented"></p>
+                </div>
+
+                <div class="detailedPrjGrid-item">
+                    <p class="alignCenter" style="font-size: calc(16px + 0.65vw)">Features:</p>
+                    <div class="featureGrid">
+
+                    </div>
+
+
+
+                </div>
+
+                <div class="detailedPrjGrid-item" id="github_logo">
+                    <p class="alignCenter" style="font-size: calc(16px + 0.65vw); margin-top:6px;">GitHub link:</p>
+                    <div style="max-width: 100px; margin:auto">
+                        <a href="https://github.com/egorchern/Project_ChessWithInterface" target="_blank" id="githubLink">
+                            <img src="Assets/GitHubLogo.png">
+                        </a>
+
+                    </div>
+
+                </div>
+                <span class="close" onclick="$('.modall').css('display','none')">&times;</span>
+
+                <div class="detailedPrjGrid-item" id="descr" style="margin-top:40px">
+
+                </div>
+            </div>
+
+        </div>
+        
+        `
+        content_to_load = projects_content;
     }
     else if(id === "Academics"){
         let academics_content = `
@@ -191,14 +349,14 @@ function bind_left_slide_animation(selector) {
 
 }
 
-
+let image_sources = [];
 function expandProject(prjID){
     
     var str = prjID;
     var num = Number(str.replace(/prj/i,""));
     var implementedStrings = ["C#, using WPF as the interface framework","HTML + CSS(Bootsrap included) + JS(jQuery)"];
     var featuresForProjects = [["AI","Save/Load","Archive of Played Games","Fischer Random Chess"],["Dynamic addition of bookmarks","Interactive deletion of bookmarks","Visual layering of bookmarks"]];
-    var pictures = ["prj1Big.png","prj2Big.png"];
+    let slide_show_lists = [["Assets/prj1_slide1.png", "Assets/prj1_slide2.png", "Assets/prj1_slide3.png"], ["Assets/prj2_slide1.png", "Assets/prj2_slide2.png", "Assets/prj2_slide3.png"]];
     var githubLinks = ["https://github.com/egorchern/Project_ChessWithInterface","https://github.com/egorchern/bookmarker"];
     var descriptions = [
         "This application was made with WPF which is the modern framework for developing desktop apps with C languages. My chess app includes a choice to have control over both sides or play against an AI which utilizes parallel processing. Everything has been done from scratch except for the visual assets which were taken from royalty-free image website. This project also includes an interfacing app to connect to an offline database. Every completed game automatically gets recorded in the database so that the user can analyze them later",
@@ -206,7 +364,11 @@ function expandProject(prjID){
     ];
     
     $(document).ready(function(){
-        $('#expandedPrj-pic').attr("src", "Assets/" + pictures[num]);
+        
+        slide_show_index = 0;
+        image_sources = slide_show_lists[num];
+        reset_slideshow("my-slide-show");
+        load_slideshow("my-slide-show");
         $('.modall').css("display","flex");
         $("#implemented").html(implementedStrings[num]);
         var featureList = featuresForProjects[num];
@@ -220,7 +382,7 @@ function expandProject(prjID){
         $("#descr").append("<p>" + descriptions[num] + "</p>");
         
         
-    })
+    });
                       
                       
     
@@ -228,4 +390,44 @@ function expandProject(prjID){
     
 
    
+}
+function reset_slideshow(id){
+    $(`#${id} > .slide-show-dots-container`).empty();
+    $(`#${id} .right-slide-btn`).unbind();
+    $(`#${id} .left-slide-btn`).unbind();
+    $(`#${id} > .slide-show-dots-container > .slide-show-dot`).unbind();
+}
+function load_slideshow(id){
+    $(`#${id} > .slide-show-image-container > img`).attr("src", image_sources[slide_show_index]);
+    for (let i = 0; i < image_sources.length;i++){
+        $(`#${id} > .slide-show-dots-container`).append(`
+        <div class='slide-show-dot' data-index='${i}'>
+        </div>
+        `)
+    }
+    $(`#${id} > .slide-show-dots-container > .slide-show-dot:first-child`).addClass("slide-show-dot-active");
+    $(`#${id} .right-slide-btn`).bind("click", function(e){
+        if(slide_show_index < image_sources.length - 1){
+            slide_show_index += 1;
+            $(`#${id} > .slide-show-image-container > img`).attr("src", image_sources[slide_show_index]);
+            $(`#${id} > .slide-show-dots-container > .slide-show-dot`).removeClass("slide-show-dot-active");
+            $(`#${id} > .slide-show-dots-container > .slide-show-dot:nth-child(${slide_show_index + 1})`).addClass("slide-show-dot-active");
+        }
+    });
+    $(`#${id} .left-slide-btn`).bind("click", function(e){
+        if(slide_show_index > 0){
+            slide_show_index -= 1;
+            $(`#${id} > .slide-show-image-container > img`).attr("src", image_sources[slide_show_index]);
+            $(`#${id} > .slide-show-dots-container > .slide-show-dot`).removeClass("slide-show-dot-active");
+            $(`#${id} > .slide-show-dots-container > .slide-show-dot:nth-child(${slide_show_index + 1})`).addClass("slide-show-dot-active");
+        }
+    });
+    $(`#${id} > .slide-show-dots-container > .slide-show-dot`).bind("click", function(e){
+        let index = Number(this.dataset.index);
+        slide_show_index = index;
+        $(`#${id} > .slide-show-image-container > img`).attr("src", image_sources[slide_show_index]);
+        $(`#${id} > .slide-show-dots-container > .slide-show-dot`).removeClass("slide-show-dot-active");
+        $(`#${id} > .slide-show-dots-container > .slide-show-dot:nth-child(${slide_show_index + 1})`).addClass("slide-show-dot-active");
+    })
+
 }
