@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=B612&family=Roboto&display=swap");
 
-
 @media (min-width: 740.01px) {
   .modall{
+    
     justify-content: center;
   }
   #github_logo{
@@ -10,11 +10,12 @@
     grid-column-end: 3;
   }
   .modall-content {
+    
     width: 80%;
   }
 
   #detailedPrjGrid {
-    padding: 28px;
+    padding: 18px;
   }
 
   .academics-table {
@@ -52,7 +53,7 @@
 
 
   #detailedPrjGrid {
-    grid-template-rows: auto;
+    grid-template-rows: 1fr 2fr 1fr auto;
     grid-template-columns: 60fr 42fr;
     grid-column-gap: 25px;
   }
@@ -63,6 +64,7 @@
   }
 
   #descr {
+    
     grid-column-start: 1;
     grid-column-end: 3;
   }
@@ -72,6 +74,7 @@
 
   
   .modall-content {
+    
     width: 95%;
   }
 
@@ -103,7 +106,11 @@
     grid-row-gap: 10px;
   }
 }
-
+@media(max-height: 750px){
+  .modall{
+    justify-content: unset;
+  }
+}
 #gcse-container,
 #implemented,
 .featureGrid p,
@@ -115,17 +122,13 @@
   border-radius: 0.45rem;
 }
 
-.detailedPrjGrid-item p,
-.featureGrid p,
-#implemented,
+
+
+
 #navigation {
   -moz-user-select: -moz-none;
   -khtml-user-select: none;
   -webkit-user-select: none;
-  /*
-    Introduced in IE 10.
-    See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
-  */
   -ms-user-select: none;
   user-select: none;
 }
@@ -487,7 +490,7 @@ body,
 }
 
 .slide-show-btn {
-  background-color: rgba(5, 5, 5, 0.45);
+  background-color: rgba(5, 5, 5, 0.40);
   transition: all 0.3s;
   font-size: 1.3rem;
   cursor: pointer;
@@ -583,8 +586,8 @@ picture {
 
 .close {
   position: absolute;
-  top: 15px;
-  right: 35px;
+  top: 4px;
+  right: 10px;
   color: #f1f1f1;
   font-size: 40px;
   font-weight: bold;

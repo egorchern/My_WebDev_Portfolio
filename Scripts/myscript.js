@@ -2,21 +2,21 @@ var slide_animation_duration = "0.8s";
 let slide_show_index = 0;
 
 $(function () {
-    
+
     $('#nav-list > li').bind("click", function (e) {
         load_content(this.id);
     });
     bind_left_slide_animation("#main");
-    
+
 });
 
-function load_content(id){
+function load_content(id) {
     let content_to_load = ``;
     $('.modall').remove();
     $('#main').remove();
     $('#nav-list > li > span').removeClass("active");
     $(`#${id} > span`).addClass("active");
-    if(id === "About_myself"){
+    if (id === "About_myself") {
         let about_myself_content = `
         <div id="main">
             <div id="MainGrid">
@@ -96,11 +96,9 @@ function load_content(id){
         </div>
         `;
         content_to_load = about_myself_content;
-    }
-    else if(id ==="Relevant_experience"){
+    } else if (id === "Relevant_experience") {
 
-    }
-    else if(id === "Projects"){
+    } else if (id === "Projects") {
         let projects_content = `
         <div id="main">
             <div class="row" id="cards">
@@ -129,9 +127,9 @@ function load_content(id){
                     </div>
                     <div class="project_cards-grid-item">
                         <div class="thumbnail">
-                            <img src="Assets/Prj1Preview.PNG">
+                            <img src="Assets/prj3_preview.PNG">
                         </div>
-                        <p class="alignCenter">Something else</p>
+                        <p class="alignCenter">A remake of a classical windows game: Minesweeper. Renovated with modern technology</p>
                         <div class="viewProjectBtnContainer">
                             <span class="btn-expand" id="prj2" onclick="expandProject(this.id)">Expand</span>
                         </div>
@@ -139,19 +137,19 @@ function load_content(id){
                     </div>
                     <div class="project_cards-grid-item">
                         <div class="thumbnail">
-                            <img src="Assets/Prj1Preview.PNG">
+                            <img src="Assets/prj4_preview.PNG">
                         </div>
 
-                        <p class="alignCenter">Something else</p>
+                        <p class="alignCenter">Anime and manga review comparison website. Lets you compare reviews and ratings from multiple sites on touch of one button</p>
                         <div class="viewProjectBtnContainer">
                             <span class="btn-expand" id="prj3" onclick="expandProject(this.id)">Expand</span>
                         </div>
                     </div>
                     <div class="project_cards-grid-item">
                         <div class="thumbnail">
-                            <img src="Assets/Prj1Preview.PNG">
+                            <img src="Assets/prj5_preview.PNG">
                         </div>
-                        <p class="alignCenter">My chess program</p>
+                        <p class="alignCenter">This C# app solves linear optimisation problems via the algebraic approach: the Simplex method. It also shows all the tables that are used in the workings </p>
                         <div class="viewProjectBtnContainer">
                             <span class="btn-expand" id="prj4" onclick="expandProject(this.id)">Expand</span>
                         </div>
@@ -194,10 +192,7 @@ function load_content(id){
 
 
 
-                <!-- 
-                            1725 cut-of for big picture
-                        !-->
-
+              
             </div>
             
         </div>
@@ -248,7 +243,7 @@ function load_content(id){
                     </div>
 
                 </div>
-                <span class="close" onclick="$('.modall').css('display','none')">&times;</span>
+                <span class="close" onclick="$('#wrapper').css('overflow-y','auto'); $('.modall').css('display','none')">&times;</span>
 
                 <div class="detailedPrjGrid-item" id="descr" style="margin-top:40px">
 
@@ -259,8 +254,7 @@ function load_content(id){
         
         `
         content_to_load = projects_content;
-    }
-    else if(id === "Academics"){
+    } else if (id === "Academics") {
         let academics_content = `
         <div id="main">
             <div class="page_item">
@@ -325,13 +319,12 @@ function load_content(id){
         </div id="main">
         `
         content_to_load = academics_content;
-    }
-    else if(id === "Contacts"){
+    } else if (id === "Contacts") {
 
     }
     $('main').prepend(content_to_load);
     bind_left_slide_animation('#main')
-    
+
 }
 
 function bind_left_slide_animation(selector) {
@@ -344,85 +337,103 @@ function bind_left_slide_animation(selector) {
             "animation-timing-function": "cubic-bezier(0.175, 0.885, 0.32, 1.275)"
 
         });
-        
+
     }, 65);
 
 }
 
 let image_sources = [];
-function expandProject(prjID){
-    
+
+function expandProject(prjID) {
+
     var str = prjID;
-    var num = Number(str.replace(/prj/i,""));
-    var implementedStrings = ["C#, using WPF as the interface framework","HTML + CSS(Bootsrap included) + JS(jQuery)"];
-    var featuresForProjects = [["AI","Save/Load","Archive of Played Games","Fischer Random Chess"],["Dynamic addition of bookmarks","Interactive deletion of bookmarks","Visual layering of bookmarks"]];
-    let slide_show_lists = [["Assets/prj1_slide1.png", "Assets/prj1_slide2.png", "Assets/prj1_slide3.png"], ["Assets/prj2_slide1.png", "Assets/prj2_slide2.png", "Assets/prj2_slide3.png"]];
-    var githubLinks = ["https://github.com/egorchern/Project_ChessWithInterface","https://github.com/egorchern/bookmarker"];
-    var descriptions = [
-        "This application was made with WPF which is the modern framework for developing desktop apps with C languages. My chess app includes a choice to have control over both sides or play against an AI which utilizes parallel processing. Everything has been done from scratch except for the visual assets which were taken from royalty-free image website. This project also includes an interfacing app to connect to an offline database. Every completed game automatically gets recorded in the database so that the user can analyze them later",
-        "This project is a web site hosted on GitHub Pages. This website allows users to add a visual bookmark via a user-friendly interface which can be maximized or minimized by clicking an appropriate button again. The bookmark data is stored permanently via cookies. Bookmark tiles are then generated dynamically via JavaScript. Bookmarks can be easily deleted via another menu that can be expanded via the minus button at the top of the page. The site is minimalistic in its design, as it only includes the necessary details."
+    var num = Number(str.replace(/prj/i, ""));
+    var implementedStrings = ["C#, using WPF as the interface framework", "HTML + CSS(Bootsrap included) + JS(jQuery)", "HTML + CSS(Bootsrap included) + JS(jQuery)", "Flask(Python) + HTML + CSS(Bootsrap included) + JS(jQuery)", "C#, using WPF as the interface framework"];
+    var featuresForProjects = [
+        ["AI", "Save/Load", "Archive of Played Games", "Fischer Random Chess"],
+        ["Dynamic addition of bookmarks", "Responsive", "Visual layering of bookmarks"],
+        ["Help pages with rules", "Same minesweeper but in the browser", "Modern interface"],
+        ["Responsive design", "Asynchronous load of content", "Customly made API"],
+        ["Quick algrorithm", "Responsive interface", "Shows intermidiate simplex tables"]
     ];
-    
-    $(document).ready(function(){
-        
+    let slide_show_lists = [
+        ["Assets/prj1_slide1.PNG", "Assets/prj1_slide2.PNG", "Assets/prj1_slide3.PNG"],
+        ["Assets/prj2_slide1.PNG", "Assets/prj2_slide2.PNG", "Assets/prj2_slide3.PNG"],
+        ["Assets/prj3_slide1.PNG", "Assets/prj3_slide2.PNG", "Assets/prj3_slide3.PNG", "Assets/prj3_slide4.PNG"],
+        ["Assets/prj4_slide1.PNG", "Assets/prj4_slide2.PNG", "Assets/prj4_slide3.PNG"],
+        ["Assets/prj5_slide1.PNG", "Assets/prj5_slide2.PNG"]
+    ];
+    var githubLinks = ["https://github.com/egorchern/Project_ChessWithInterface", "https://github.com/egorchern/bookmarker", "https://github.com/egorchern/minesweeper", "https://github.com/egorchern/Compare_flask", "https://github.com/egorchern/Simplex_Solver"];
+    var descriptions = [
+        "This application was made with WPF which is the modern framework for developing desktop apps with C languages. My chess app includes a choice to have control over both sides or play against an AI which utilizes parallel processing. Everything has been done from scratch except for the visual assets which were taken from royalty-free image website. This project also includes an interfacing app to connect to an offline database. Every completed game automatically gets recorded in the database so that the user can analyze them later. The games can be queried for several parameters that can be mixed together to find the intended game(s)",
+        "You can have a look at the website by clicking <a href='https://egorchern.github.io/bookmarker/' target='_black'>here</a><br>This project is a web site hosted on GitHub Pages.   website allows users to add a visual bookmark via a user-friendly interface which can be maximized or minimized by clicking an appropriate button again. The bookmark data is stored permanently via cookies. Bookmark tiles are then generated dynamically via JavaScript. Bookmarks can be easily deleted via another menu that can be expanded via the minus button at the top of the page. The site is minimalistic in its design, as it only includes the necessary details.",
+        "You can have a look at the website by clicking <a href='https://egorchern.github.io/minesweeper/' target='_black'>here</a><br>I have remade the original Minesweeper that was only available on windows, I have used modern web development technologies such as flexbox and jQuery. This simple yet quite addictive game can now be experienced on all devices that are capable of running a browser. I have also added a feature that allows to input a custom playing field with a user selected number of mines.",
+        "You can have a look at the website by clicking <a href='https://gocompare.herokuapp.com/' target='_black'>here</a><br></br>I always wanted all of reviews to be accessible from one location without having to go to all the websites and manually comparing reviews and scores. I have achieved just that. The website uses AJAX to make requests to the server that runs on Flask. The server then web-scrapes the websites and returns them in turn to the client-side JS. The contents are then loaded asyncrhonously to enhance the user experince. For example the user can have a look at scores form one site while others are loading.",
+        "This application solves linear optimisation problems. I decided to make it since I could not find another app that would also show all the workings and not just the final result. The program utilizes a two-step simplex method to solve the problem. The process is very quick and the message box is displayed with the answer in about 1-4s for problems with 1-4 inequalities"
+    ];
+
+    $(document).ready(function () {
+        $('#wrapper').css("overflow-y","hidden");
+
         slide_show_index = 0;
         image_sources = slide_show_lists[num];
         reset_slideshow("my-slide-show");
         load_slideshow("my-slide-show");
-        $('.modall').css("display","flex");
+        $('.modall').css("display", "flex");
         $("#implemented").html(implementedStrings[num]);
         var featureList = featuresForProjects[num];
         $(".featureGrid").empty();
-        for(var i = 0; i < featureList.length; i++)
-        {
+        for (var i = 0; i < featureList.length; i++) {
             $(".featureGrid").append("<p>" + featureList[i] + "</p>");
         }
-        $("#githubLink").attr("href",githubLinks[num]);
+        $("#githubLink").attr("href", githubLinks[num]);
         $("#descr").empty();
         $("#descr").append("<p>" + descriptions[num] + "</p>");
-        
-        
-    });
-                      
-                      
-    
-    
-    
 
-   
+
+    });
+
+
+
+
+
+
+
 }
-function reset_slideshow(id){
+
+function reset_slideshow(id) {
     $(`#${id} > .slide-show-dots-container`).empty();
     $(`#${id} .right-slide-btn`).unbind();
     $(`#${id} .left-slide-btn`).unbind();
     $(`#${id} > .slide-show-dots-container > .slide-show-dot`).unbind();
 }
-function load_slideshow(id){
+
+function load_slideshow(id) {
     $(`#${id} > .slide-show-image-container > img`).attr("src", image_sources[slide_show_index]);
-    for (let i = 0; i < image_sources.length;i++){
+    for (let i = 0; i < image_sources.length; i++) {
         $(`#${id} > .slide-show-dots-container`).append(`
         <div class='slide-show-dot' data-index='${i}'>
         </div>
         `)
     }
     $(`#${id} > .slide-show-dots-container > .slide-show-dot:first-child`).addClass("slide-show-dot-active");
-    $(`#${id} .right-slide-btn`).bind("click", function(e){
-        if(slide_show_index < image_sources.length - 1){
+    $(`#${id} .right-slide-btn`).bind("click", function (e) {
+        if (slide_show_index < image_sources.length - 1) {
             slide_show_index += 1;
             $(`#${id} > .slide-show-image-container > img`).attr("src", image_sources[slide_show_index]);
             $(`#${id} > .slide-show-dots-container > .slide-show-dot`).removeClass("slide-show-dot-active");
             $(`#${id} > .slide-show-dots-container > .slide-show-dot:nth-child(${slide_show_index + 1})`).addClass("slide-show-dot-active");
         }
     });
-    $(`#${id} .left-slide-btn`).bind("click", function(e){
-        if(slide_show_index > 0){
+    $(`#${id} .left-slide-btn`).bind("click", function (e) {
+        if (slide_show_index > 0) {
             slide_show_index -= 1;
             $(`#${id} > .slide-show-image-container > img`).attr("src", image_sources[slide_show_index]);
             $(`#${id} > .slide-show-dots-container > .slide-show-dot`).removeClass("slide-show-dot-active");
             $(`#${id} > .slide-show-dots-container > .slide-show-dot:nth-child(${slide_show_index + 1})`).addClass("slide-show-dot-active");
         }
     });
-    $(`#${id} > .slide-show-dots-container > .slide-show-dot`).bind("click", function(e){
+    $(`#${id} > .slide-show-dots-container > .slide-show-dot`).bind("click", function (e) {
         let index = Number(this.dataset.index);
         slide_show_index = index;
         $(`#${id} > .slide-show-image-container > img`).attr("src", image_sources[slide_show_index]);
