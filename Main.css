@@ -1,16 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=B612&family=Roboto&display=swap");
 
 @media (min-width: 740.01px) {
+  /*
   .modall{
     
     justify-content: center;
   }
+  */
   #github_logo{
     grid-column-start: 1;
     grid-column-end: 3;
   }
   .modall-content {
-    
+    height: 85%;
     width: 80%;
   }
 
@@ -76,6 +78,7 @@
   .modall-content {
     
     width: 95%;
+    height: 95%;
   }
 
   #detailedPrjGrid {
@@ -106,11 +109,13 @@
     grid-row-gap: 10px;
   }
 }
+/*
 @media(max-height: 750px){
   .modall{
     justify-content: unset;
   }
 }
+*/
 #gcse-container,
 #implemented,
 .featureGrid p,
@@ -546,7 +551,7 @@ picture {
 
 
 .modall {
-  
+  justify-content: center;
   flex-direction: column;
   display: none;
   position: fixed;
@@ -567,6 +572,7 @@ picture {
 
 .modall-content {
   
+  overflow:auto;
   max-width: 1150px;
   background-color: white;
   display: grid;
