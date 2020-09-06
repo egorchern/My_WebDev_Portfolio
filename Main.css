@@ -1,16 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=B612&family=Roboto&display=swap");
 
-@media (min-width: 740.01px) {
-  /*
-  .modall{
-    
-    justify-content: center;
+* {
+  /*white-space: pre-wrap;*/
+  word-break: break-word;
+  font-family: "Roboto";
+  font-size: max(15px, calc(12px + 0.25vw));
+
+}
+
+@media (min-width: 740px) {
+
+  
+  #experience {
+    width: 65%;
   }
-  */
-  #github_logo{
+
+  #github_logo {
     grid-column-start: 1;
     grid-column-end: 3;
   }
+
   .modall-content {
     height: 85%;
     width: 80%;
@@ -66,17 +75,20 @@
   }
 
   #descr {
-    
+
     grid-column-start: 1;
     grid-column-end: 3;
   }
 }
 
-@media (max-width: 740.01px) {
+@media (max-width: 739.999px) {
 
-  
+  #experience {
+    width: 95%;
+  }
+
   .modall-content {
-    
+
     width: 95%;
     height: 95%;
   }
@@ -109,6 +121,7 @@
     grid-row-gap: 10px;
   }
 }
+
 /*
 @media(max-height: 750px){
   .modall{
@@ -129,6 +142,10 @@
 
 
 
+#experience {
+
+  max-width: 1062px;
+}
 
 #navigation {
   -moz-user-select: -moz-none;
@@ -137,13 +154,31 @@
   -ms-user-select: none;
   user-select: none;
 }
-
+#slide-down-container{
+  border-radius: 12px;
+  width: 82%;
+  padding: 16px;
+  background-color: hsla(0,0%,82%);
+  display:flex;
+  flex-flow: row wrap;
+  align-items: center;
+  margin:auto;
+}
 img {
   width: 100%;
   height: 100%;
 
 }
 
+.media_containers {
+  max-width: 80px;
+  max-height: 85px;
+  margin: 5%;
+  cursor: pointer
+}
+.media_containers:hover{
+  box-shadow: 0px 0px 7px 5px #FF7505;
+}
 #head-item {
   max-height: calc(70px + 5vw);
 }
@@ -172,12 +207,7 @@ body {
 
 
 
-#forTransform {
-  font-size: 4vw;
-  margin-left: 3.5vw;
-  margin-top: 10px;
-  display: none;
-}
+
 
 #reactive_grid {
   display: grid;
@@ -209,6 +239,16 @@ ul {
   cursor: pointer;
 }
 
+#nav-list>li {
+  color: white;
+  font-weight: 500;
+
+}
+
+#nav-list>li>span {
+  font-size: max(16px, calc(14px + 0.42vw)) !important;
+}
+
 #nav-list>li:hover {
   background-color: hsla(0, 0%, 100%, 1);
   color: black;
@@ -217,10 +257,9 @@ ul {
 
 #navigation {
   width: 100%;
-  color: white;
+
   padding: 0.65vh;
-  font-weight: 500;
-  font-size: calc(11.5px + 0.5vw);
+
   background-color: hsla(188, 33%, 46%, 0.78);
 
 
@@ -260,7 +299,7 @@ ul {
 
   text-align: center;
 
-  font-size: calc(11.5px + 0.25vw);
+
 }
 
 #profilePic {
@@ -271,12 +310,7 @@ ul {
 
 
 
-* {
-  /*white-space: pre-wrap;*/
-  word-wrap: break-word;
-  font-family: "Roboto";
 
-}
 
 p {
   margin-left: 4px;
@@ -311,13 +345,13 @@ p {
 
 .Heading {
   text-align: center;
-  font-size: calc(16px + 0.65vw);
+  font-size: calc(16px + 0.65vw) !important;
 }
 
 .dropright>button {
   text-align: center;
   padding: 12px;
-  font-size: calc(16px + 0.65vw);
+  font-size: calc(16px + 0.65vw) !important;
 
 }
 
@@ -355,25 +389,25 @@ body,
 #project_cards-grid {
   display: flex;
   flex-flow: row wrap;
-  
+
   justify-content: center;
-  flex:auto;
+  flex: auto;
   padding: 30px;
 }
 
 .project_cards-grid-item {
   max-width: 350px;
-  
+
   padding: 8px;
   margin: 15px;
   background-color: white;
-  font-size: calc(11.5px + 0.25vw);
+
   display: flex;
   flex-direction: column;
 }
 
 #cards {
-  display:flex;
+  display: flex;
   flex-direction: row;
   justify-content: center;
   margin-top: 5vh;
@@ -390,7 +424,7 @@ body,
   position: relative;
   padding: 10px 20px;
   background: white;
-  font-size: calc(18px + 0.4vw);
+  font-size: calc(18px + 0.4vw) !important;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
   transition: all 0.8s;
@@ -497,7 +531,7 @@ body,
 .slide-show-btn {
   background-color: rgba(5, 5, 5, 0.40);
   transition: all 0.3s;
-  font-size: 1.3rem;
+  font-size: 1.3rem !important;
   cursor: pointer;
   -moz-user-select: -moz-none;
   -khtml-user-select: none;
@@ -517,10 +551,7 @@ body,
 }
 
 
-.detailedPrjGrid-item {
-  font-size: calc(11.5px + 0.25vw);
-
-}
+.detailedPrjGrid-item {}
 
 .featureGrid {
   display: flex;
@@ -555,7 +586,7 @@ picture {
   flex-direction: column;
   display: none;
   position: fixed;
-  
+
   z-index: 1;
   left: 0;
   top: 0;
@@ -565,14 +596,14 @@ picture {
   /* Fallback color */
   background-color: rgba(0, 0, 0, 0.85);
   /* Black w/ opacity */
-  
+
   align-items: center;
   overflow-y: auto;
 }
 
 .modall-content {
-  
-  overflow:auto;
+
+  overflow: auto;
   max-width: 1150px;
   background-color: white;
   display: grid;
@@ -595,7 +626,7 @@ picture {
   top: 4px;
   right: 10px;
   color: #f1f1f1;
-  font-size: 40px;
+  font-size: 40px !important;
   font-weight: bold;
   transition: 0.3s;
 }
@@ -622,7 +653,7 @@ picture {
 
 th {
   text-align: center;
-  font-size: calc(12.5px + 0.35vw);
+  font-size: calc(12.5px + 0.35vw) !important;
 }
 
 td {

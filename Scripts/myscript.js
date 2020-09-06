@@ -6,7 +6,9 @@ $(function () {
     $('#nav-list > li').bind("click", function (e) {
         load_content(this.id);
     });
+    load_content("About_myself");
     bind_left_slide_animation("#main");
+    
 
 });
 
@@ -20,17 +22,26 @@ function load_content(id) {
         let about_myself_content = `
         <div id="main">
             <div id="MainGrid">
-                <div class="MainGrid-item page_item">
-                    <div id="profilePic">
-                        <img src="Assets/ProfilePic.png">
+                <div class="MainGrid-item page_item"  style="display:flex;flex-direction: column;">
+                    
+                    
+                    <p>My name is Egor Chernyshev, I loved all things to do with IT from the age of 13. Since then I've practiced in various fields in IT. I aspire to get a career in web development as a full-stack developer.
+                    </p>
+                    <div style="display:flex;flex-flow: row wrap;justify-content: center;align-items: center;margin-top:5%;">
+                        <div class="media_containers" data-refs="resume">
+                            <img src="Assets/Resume_picture.png"  style="max-height: inherit;">
+                        </div >
+                        <div class="media_containers" data-refs="email">
+                            <img src="Assets/email_picture.PNG"  style="max-height: inherit;">
+                        </div >
+                        <div class="media_containers" data-refs="phone">
+                            <img src="Assets/phone_picture.PNG"  style="max-height: inherit;">
+                        </div>
+                    </div>
+                    <div id="personal_profile">
 
                     </div>
-                    <p class="alignCenter">Mr. Egor Chernyshev</p>
-                    <p>Currently, I am a studying A-Levels at Bury College.<br>
-                        Specifically I am studying: Computer science, Mathematics, Further Mathematics and Accounting.
-                        <br>
-                        I aspire to get a career in web development as a full-stack developer.
-                    </p>
+                    
                 </div>
 
 
@@ -97,7 +108,32 @@ function load_content(id) {
         `;
         content_to_load = about_myself_content;
     } else if (id === "Relevant_experience") {
-
+        let experience_content = `
+        <div id="main">
+            <div class="page_item" id="experience">
+                <div>
+                    <p class="Heading">My programming languages</p>
+                    <div class="featureGrid">
+                        <p>C# : 2 Years</p>
+                        <p>Python : 1 Year</p>
+                        <p>HTML + CSS + JS : 1 Year</p>
+                    </div>
+                    
+                </div>
+                <div style="margin-top: 20px; padding:10px;">
+                    <p class="Heading">Manchester College's creative arts competition (Programming)</p>
+                    <p>In 2018 I was asked if I wanted to be part of a team that would represent Bury College at creative arts competition in Manchester College. I was delighted to take part in my first programming competition. Two other students were picked from different courses. Nobody knew each other but we had similar interests: being interested in tech. While we were travelling to the competition, we casually chatted to better understand each other. We soon learned that the competition didn't have any project idea in mind and instead we were told that we could make whatever we wanted. This threw us off a little bit since we were expecting that we would only need to implement the idea given to us. We settled for a calculator app made in C# that would do normal calculations, simultaneous equations and have a small quiz-style game. That quiz would display an arithmetic expression and the user would need to pick a correct answer from four options. We planned for a quiz to have a varying level of difficulty but that perhaps proved to be a little too ambitious for a three-man team to build everything in four hours. We assigned roles to each other, and I was responsible for the quiz and bringing together all the code and making an interface. I nominated myself to this role since I had a lot of experience with making interface apps in C#. Because of how interface needs to communicate with the back-end, I kind of became a leader of our team, constantly communicating with my team members, asking how they envisioned they code and what interface would suit that.
+                        In the end, managed to fulfil most of our project's promises. However, I wasn't quite able to implement varying difficulty in our quiz and our documentation wasn't complete. Still, we enjoyed working together and we each learned something new from each other. We placed third out of eight teams. Our end product could be much better, but we learned a lot about working as a team.</p>
+                </div>
+                <div style="margin-top: 20px; padding:10px;">
+                    <p class="Heading">Work experience placement at M247</p>
+                    <p>As a part of my A-Level study at Bury College, we took part in a one-week work experience placement. I have secured a placement at an ISP company called M247. I've done some research on the company beforehand. They mainly focus on providing high-bandwidth internet to other businesses. They also offer varying levels of support ranging from passive support to 24/7 network monitoring. Lastly, they offer security options on those networks such as physical and software firewalls. As part of my work experience placement, I experienced all aspects of IT positions at M247. Firstly I worked with internal IT support, they mainly focused on maintaining hardware at the office and managing employee access levels. I helped with resetting a laptop that required a full wipe. Next, I was placed with the company's two web developers. The fact that I didn't know much about web development at that moment didn't stop me from getting involved with the team. It was my first time seeing a big tech company's git repository, I was amazed by how much commits professional developers make. The code was also cleanly structured with comments appearing at around every ten lines of code. I also got to witness how the deployment process works. Unfortunately, I couldn't be of much help to them since I didn't know nearly enough about web development to be in a position to help with anything. But I learned a great deal about client-server interactions. Lastly, I got to experience the tech support that M247 offers. On that day there were an unusually huge number of calls to the tech support, I mainly listened and observed how those engineers got about solving customer's problems. After the influx of calls has ended, I got to ask some questions like what does it mean when customers request VPN access to their network and how the engineers check whether people can be given access to the server locations. 
+                        Although at first I only thought that I would only enjoy my time with the developer team, I changed my opinions at the end of the work placement week. I learned a great deal about networking from the tech support team. I also got to experience how internal IT support works and how it isn't as easy of a job as it seems to be. I thoroughly enjoyed my time at M247 and I sincerely appreciate their time and effort in offering me the work placement.</p>
+                </div>
+            </div>
+        </div>
+        `;
+        content_to_load = experience_content;
     } else if (id === "Projects") {
         let projects_content = `
         <div id="main">
@@ -319,12 +355,44 @@ function load_content(id) {
         </div id="main">
         `
         content_to_load = academics_content;
-    } else if (id === "Contacts") {
-
     }
     $('main').prepend(content_to_load);
     bind_left_slide_animation('#main')
+    $(function () {
+        $('.media_containers').bind("click", function(e){
+            $('#personal_profile').empty();
+            let refers = this.dataset.refs;
+            let content = ``;
+            if (refers === "resume"){
+                content = `
+                <div id="slide-down-container" style="display:none;position:relative;">
+                    <a href="https://drive.google.com/file/d/1m2hE3COuW9gZkKjryJbunO3a-PWmb6c7/view?usp=sharing" target='_blank'>Click to download my CV</a>
+                    <span style="font-size: 24px;position:absolute;right:5px;user-select: none;cursor:pointer" onclick="$('#slide-down-container').slideUp();">&times</span>
+                </div >
 
+                `;
+                
+            }
+            else if(refers === "email"){
+                content = `
+                <div id="slide-down-container" style="display:none;position:relative;">
+                    <span>egorch.formal@gmail.com</span>
+                    <span style="font-size: 24px;position:absolute;right:5px;user-select: none;cursor:pointer" onclick="$('#slide-down-container').slideUp();">&times</span>
+                </div >
+                `
+            }
+            else if(refers === "phone"){
+                content = `
+                <div id="slide-down-container" style="display:none;position:relative;">
+                    <span>+447827986635</span>
+                    <span style="font-size: 24px;position:absolute;right:5px;user-select: none;cursor:pointer" onclick="$('#slide-down-container').slideUp();">&times</span>
+                </div >
+                `
+            }
+            $('#personal_profile').append(content);
+            $('#slide-down-container').slideDown();
+        });
+    });
 }
 
 function bind_left_slide_animation(selector) {
