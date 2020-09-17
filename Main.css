@@ -272,7 +272,7 @@ ul {
 #main {
   margin-top: 4vh;
   margin-bottom: 4vh;
-  transform: translateX(-100%);
+  
   display: flex;
   justify-content: center;
 

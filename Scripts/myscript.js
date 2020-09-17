@@ -1,5 +1,6 @@
 var slide_animation_duration = "0.8s";
 let slide_show_index = 0;
+let slide_from_left = true;
 
 $(function () {
 
@@ -7,7 +8,7 @@ $(function () {
         load_content(this.id);
     });
     load_content("About_myself");
-    bind_left_slide_animation("#main");
+    
     
 
 });
@@ -359,7 +360,7 @@ function load_content(id) {
         content_to_load = academics_content;
     }
     $('main').prepend(content_to_load);
-    bind_left_slide_animation('#main')
+    bind_left_slide_animation('#main');
     $(function () {
         $('.media_containers').bind("click", function(e){
             $('#personal_profile').empty();
@@ -398,7 +399,15 @@ function load_content(id) {
 }
 
 function bind_left_slide_animation(selector) {
-
+    console.log(slide_from_left);
+    if (slide_from_left === true){
+        $(selector).css("transform", "translateX(-100%)");
+        slide_from_left = false;
+    }
+    else{
+        $(selector).css("transform", "translateX(100%)");
+        slide_from_left = true;
+    }
     setTimeout(function () {
         $(selector).css({
             "animation-name": "slide-in",
