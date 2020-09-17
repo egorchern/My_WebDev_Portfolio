@@ -586,11 +586,10 @@ picture {
 
 
 .modall {
-  justify-content: center;
-  flex-direction: column;
+  
   display: none;
   position: fixed;
-
+  flex-direction: column;
   z-index: 1;
   left: 0;
   top: 0;
@@ -601,8 +600,9 @@ picture {
   background-color: rgba(0, 0, 0, 0.85);
   /* Black w/ opacity */
 
-  align-items: center;
+  
   overflow-y: auto;
+  
 }
 
 .modall-content {
@@ -626,12 +626,18 @@ picture {
 }
 
 .close {
+  /*
   position: absolute;
   top: 4px;
   right: 10px;
+  */
+  width: 100%;
+  padding-right: 5px;
+  text-align: right;
+  
   color: #f1f1f1;
   font-size: 40px !important;
-  font-weight: bold;
+  font-weight: bolder;
   transition: 0.3s;
 }
 

@@ -233,59 +233,61 @@ function load_content(id) {
             
         </div>
         <div class="modall">
+        <span class="close" onclick="$('#wrapper').css('overflow-y','auto'); $('.modall').css('display','none')">&times;</span>
+            <div style="display:flex; justify-content: center; align-items: center; flex-direction: column; width:100%; flex-grow:1;overflow: auto;">
+            
+                <div id="detailedPrjGrid" class="modall-content">
+                    
 
-            <div id="detailedPrjGrid" class="modall-content">
-                
-
-                
-                <div class="slide-show-container detailedPrjGrid-item" id="my-slide-show">
-                    <div class="slide-show-image-container">
-                        <div class="right-slide-btn slide-show-btn">❯</div>
-                        <div class="left-slide-btn slide-show-btn">❮</div>
-                        <img>
-                    </div>
-                    <div class="slide-show-dots-container">
+                    
+                    <div class="slide-show-container detailedPrjGrid-item" id="my-slide-show">
+                        <div class="slide-show-image-container">
+                            <div class="right-slide-btn slide-show-btn">❯</div>
+                            <div class="left-slide-btn slide-show-btn">❮</div>
+                            <img>
+                        </div>
+                        <div class="slide-show-dots-container">
+                            
+                        </div>
+                        
                         
                     </div>
                     
+
+
+
+                    <div class="detailedPrjGrid-item">
+                        <p class="alignCenter" style="font-size: calc(16px + 0.65vw)">Implemented using:</p>
+                        <p class="alignCenter" id="implemented"></p>
+                    </div>
+
+                    <div class="detailedPrjGrid-item">
+                        <p class="alignCenter" style="font-size: calc(16px + 0.65vw)">Features:</p>
+                        <div class="featureGrid">
+
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="detailedPrjGrid-item" id="github_logo">
+                        <p class="alignCenter" style="font-size: calc(16px + 0.65vw); margin-top:6px;">GitHub link:</p>
+                        <div style="max-width: 100px; margin:auto">
+                            <a href="https://github.com/egorchern/Project_ChessWithInterface" target="_blank" id="githubLink">
+                                <img src="Assets/GitHubLogo.png">
+                            </a>
+
+                        </div>
+
+                    </div>
                     
-                </div>
-                
 
-
-
-                <div class="detailedPrjGrid-item">
-                    <p class="alignCenter" style="font-size: calc(16px + 0.65vw)">Implemented using:</p>
-                    <p class="alignCenter" id="implemented"></p>
-                </div>
-
-                <div class="detailedPrjGrid-item">
-                    <p class="alignCenter" style="font-size: calc(16px + 0.65vw)">Features:</p>
-                    <div class="featureGrid">
+                    <div class="detailedPrjGrid-item" id="descr" style="margin-top:40px">
 
                     </div>
-
-
-
-                </div>
-
-                <div class="detailedPrjGrid-item" id="github_logo">
-                    <p class="alignCenter" style="font-size: calc(16px + 0.65vw); margin-top:6px;">GitHub link:</p>
-                    <div style="max-width: 100px; margin:auto">
-                        <a href="https://github.com/egorchern/Project_ChessWithInterface" target="_blank" id="githubLink">
-                            <img src="Assets/GitHubLogo.png">
-                        </a>
-
-                    </div>
-
-                </div>
-                <span class="close" onclick="$('#wrapper').css('overflow-y','auto'); $('.modall').css('display','none')">&times;</span>
-
-                <div class="detailedPrjGrid-item" id="descr" style="margin-top:40px">
-
                 </div>
             </div>
-
         </div>
         
         `
