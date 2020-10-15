@@ -632,7 +632,8 @@ picture {
   right: 10px;
   */
   width: 100%;
-  padding-right: 5px;
+  padding-top: 5px;
+  padding-right: 10px;
   text-align: right;
   
   color: #f1f1f1;

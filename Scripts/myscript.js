@@ -369,7 +369,7 @@ function load_content(id) {
             if (refers === "resume"){
                 content = `
                 <div id="slide-down-container" style="display:none;position:relative;">
-                    <a href="https://drive.google.com/file/d/1m2hE3COuW9gZkKjryJbunO3a-PWmb6c7/view?usp=sharing" target='_blank'>Click to download my CV</a>
+                    <a href="https://drive.google.com/file/d/1T4PueyGe7EBncyqsv9V0RTe0XOlKIQhB/view?usp=sharing" target='_blank'>Click to download my CV</a>
                     <span style="font-size: 24px;position:absolute;right:5px;user-select: none;cursor:pointer" onclick="$('#slide-down-container').slideUp();">&times</span>
                 </div >
 
