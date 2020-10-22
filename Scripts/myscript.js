@@ -193,9 +193,9 @@ function load_content(id) {
                     </div>
                     <div class="project_cards-grid-item">
                         <div class="thumbnail">
-                            <img src="Assets/Prj1Preview.PNG">
+                            <img src="Assets/prj6_preview.PNG">
                         </div>
-                        <p class="alignCenter">Something else</p>
+                        <p class="alignCenter">Static, front-end focused webpage that I designed to promote my tutoring services.</p>
                         <div class="viewProjectBtnContainer">
                             <span class="btn-expand" id="prj5" onclick="expandProject(this.id)">Expand</span>
                         </div>
