@@ -203,9 +203,9 @@ function load_content(id) {
                     </div>
                     <div class="project_cards-grid-item">
                         <div class="thumbnail">
-                            <img src="Assets/Prj1Preview.PNG">
+                            <img src="Assets/prj7_preview.PNG">
                         </div>
-                        <p class="alignCenter">Something else</p>
+                        <p class="alignCenter">Classical game of Tetris remade as a webpage. Now accessible through the convenience of a browser. Also includes new features</p>
                         <div class="viewProjectBtnContainer">
                             <span class="btn-expand" id="prj6" onclick="expandProject(this.id)">Expand</span>
                         </div>
@@ -234,7 +234,10 @@ function load_content(id) {
             
         </div>
         <div class="modall">
-        <span class="close" onclick="$('#wrapper').css('overflow-y','auto'); $('.modall').css('display','none')">&times;</span>
+        <div class="close_container">
+            <span onclick="$('#wrapper').css('overflow-y','auto'); $('.modall').css('display','none')">&times;</span>
+        </div>
+        
             <div style="display:flex; justify-content: center; align-items: center; flex-direction: column; width:100%; flex-grow:1;overflow: auto;">
             
                 <div id="detailedPrjGrid" class="modall-content">
@@ -427,28 +430,34 @@ function expandProject(prjID) {
 
     var str = prjID;
     var num = Number(str.replace(/prj/i, ""));
-    var implementedStrings = ["C#, using WPF as the interface framework", "HTML + CSS(Bootsrap included) + JS(jQuery)", "HTML + CSS(Bootsrap included) + JS(jQuery)", "Flask(Python) + HTML + CSS(Bootsrap included) + JS(jQuery)", "C#, using WPF as the interface framework"];
+    var implementedStrings = ["C#, using WPF as the interface framework", "HTML + CSS(Bootsrap included) + JS(jQuery)", "HTML + CSS(Bootsrap included) + JS(jQuery)", "Flask(Python) + HTML + CSS(Bootsrap included) + JS(jQuery)", "C#, using WPF as the interface framework", "HTML + CSS(Bootsrap included) + JS(jQuery)", "HTML + CSS(Bootsrap included) + JS"];
     var featuresForProjects = [
         ["AI", "Save/Load", "Archive of Played Games", "Fischer Random Chess"],
         ["Dynamic addition of bookmarks", "Responsive", "Visual layering of bookmarks"],
         ["Help pages with rules", "Same minesweeper but in the browser", "Modern interface"],
         ["Responsive design", "Asynchronous load of content", "Customly made API"],
-        ["Quick algrorithm", "Responsive interface", "Shows intermidiate simplex tables"]
+        ["Quick algrorithm", "Responsive interface", "Shows intermidiate simplex tables"],
+        ["Animations on scroll","Responsive", "Fast"],
+        ["Help page", "Hold piece feature", "Modern interface"]
     ];
     let slide_show_lists = [
         ["Assets/prj1_slide1.PNG", "Assets/prj1_slide2.PNG", "Assets/prj1_slide3.PNG"],
         ["Assets/prj2_slide1.PNG", "Assets/prj2_slide2.PNG", "Assets/prj2_slide3.PNG"],
         ["Assets/prj3_slide1.PNG", "Assets/prj3_slide2.PNG", "Assets/prj3_slide3.PNG", "Assets/prj3_slide4.PNG"],
         ["Assets/prj4_slide1.PNG", "Assets/prj4_slide2.PNG", "Assets/prj4_slide3.PNG"],
-        ["Assets/prj5_slide1.PNG", "Assets/prj5_slide2.PNG"]
+        ["Assets/prj5_slide1.PNG", "Assets/prj5_slide2.PNG"],
+        ["Assets/prj6_slide1.PNG", "Assets/prj6_slide2.PNG","Assets/prj6_slide3.PNG" ],
+        ["Assets/prj7_slide1.PNG", "Assets/prj7_slide2.PNG"]
     ];
-    var githubLinks = ["https://github.com/egorchern/Project_ChessWithInterface", "https://github.com/egorchern/bookmarker", "https://github.com/egorchern/minesweeper", "https://github.com/egorchern/Compare_flask", "https://github.com/egorchern/Simplex_Solver"];
+    var githubLinks = ["https://github.com/egorchern/Project_ChessWithInterface", "https://github.com/egorchern/bookmarker", "https://github.com/egorchern/minesweeper", "https://github.com/egorchern/Compare_flask", "https://github.com/egorchern/Simplex_Solver", "https://github.com/egorchern/MyTutor", "https://github.com/egorchern/Tetris"];
     var descriptions = [
         "This application was made with WPF which is the modern framework for developing desktop apps with C languages. My chess app includes a choice to have control over both sides or play against an AI which utilizes parallel processing. Everything has been done from scratch except for the visual assets which were taken from royalty-free image website. This project also includes an interfacing app to connect to an offline database. Every completed game automatically gets recorded in the database so that the user can analyze them later. The games can be queried for several parameters that can be mixed together to find the intended game(s)",
         "You can have a look at the website by clicking <a href='https://egorchern.github.io/bookmarker/' target='_black'>here</a><br>This project is a web site hosted on GitHub Pages.   website allows users to add a visual bookmark via a user-friendly interface which can be maximized or minimized by clicking an appropriate button again. The bookmark data is stored permanently via cookies. Bookmark tiles are then generated dynamically via JavaScript. Bookmarks can be easily deleted via another menu that can be expanded via the minus button at the top of the page. The site is minimalistic in its design, as it only includes the necessary details.",
         "You can have a look at the website by clicking <a href='https://egorchern.github.io/minesweeper/' target='_black'>here</a><br>I have remade the original Minesweeper that was only available on windows, I have used modern web development technologies such as flexbox and jQuery. This simple yet quite addictive game can now be experienced on all devices that are capable of running a browser. I have also added a feature that allows to input a custom playing field with a user selected number of mines.",
         "You can have a look at the website by clicking <a href='https://gocompare.herokuapp.com/' target='_black'>here</a><br></br>I always wanted all of reviews to be accessible from one location without having to go to all the websites and manually comparing reviews and scores. I have achieved just that. The website uses AJAX to make requests to the server that runs on Flask. The server then web-scrapes the websites and returns them in turn to the client-side JS. The contents are then loaded asyncrhonously to enhance the user experince. For example the user can have a look at scores form one site while others are loading.",
-        "This application solves linear optimisation problems. I decided to make it since I could not find another app that would also show all the workings and not just the final result. The program utilizes a two-step simplex method to solve the problem. The process is very quick and the message box is displayed with the answer in about 1-4s for problems with 1-4 inequalities"
+        "This application solves linear optimisation problems. I decided to make it since I could not find another app that would also show all the workings and not just the final result. The program utilizes a two-step simplex method to solve the problem. The process is very quick and the message box is displayed with the answer in about 1-4s for problems with 1-4 inequalities",
+        "You can have a look at the website by clicking <a href='https://egorchern.github.io/MyTutor/' target='_black'>here</a><br></br>This is a short, static, front-end focused website that I've created to promote my tutoring services. It is responsive and utilizes scroll track that then animates in page content. The pages are designed in a tile layout (one block element per tile). Also, the scroll animations make the user focus on every part of the webpage before reading next tile.",
+        "You can have a look at the website by clicking <a href='https://github.com/egorchern/Tetris' target='_black'>here</a><br></br>This is a remake of a classical game called Tetris. I remade it in browser without using any game engines or libraries (except for Bootstrap). The game logic is made using objects and the drawing is done via HTML5 canvas element. New shapes can easily be added by modifying shapes dictionary."
     ];
 
     $(document).ready(function () {
