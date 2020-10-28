@@ -1,7 +1,16 @@
 var slide_animation_duration = "0.8s";
 let slide_show_index = 0;
 let slide_from_left = true;
-
+function slide_query(x) {
+    if (x.matches) { // If media query matches
+      slide_animation_duration = "0.5s";
+    } else {
+      slide_animation_duration = "0.8s";
+    }
+}
+let x = window.matchMedia("(max-width: 739.999px)");
+slide_query(x);
+x.addListener(slide_query);
 $(function () {
 
     $('#nav-list > li').bind("click", function (e) {
@@ -211,16 +220,7 @@ function load_content(id) {
                         </div>
 
                     </div>
-                    <div class="project_cards-grid-item">
-                        <div class="thumbnail">
-                            <img src="Assets/Prj1Preview.PNG">
-                        </div>
-
-                        <p class="alignCenter">Something else</p>
-                        <div class="viewProjectBtnContainer">
-                            <span class="btn-expand" id="prj7" onclick="expandProject(this.id)">Expand</span>
-                        </div>
-                    </div>
+                    
                 </div>
                 
 
@@ -402,7 +402,7 @@ function load_content(id) {
 }
 
 function bind_left_slide_animation(selector) {
-    console.log(slide_from_left);
+    
     if (slide_from_left === true){
         $(selector).css("transform", "translateX(-100%)");
         slide_from_left = false;
