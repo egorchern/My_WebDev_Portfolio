@@ -248,7 +248,7 @@ function load_content(id) {
                         <div class="slide-show-image-container">
                             <div class="right-slide-btn slide-show-btn">❯</div>
                             <div class="left-slide-btn slide-show-btn">❮</div>
-                            <img>
+                            <img style="margin-left:auto; margin-right:auto">
                         </div>
                         <div class="slide-show-dots-container">
                             
