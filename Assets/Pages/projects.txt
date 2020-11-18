@@ -1,0 +1,147 @@
+<div id="main">
+    <div class="row" id="cards">
+        
+        <div style="width:90%" id="project_cards-grid">
+
+            <div class="project_cards-grid-item">
+                <div class="thumbnail">
+                    <img src="Assets/Prj1Preview.PNG">
+                </div>
+                <p class="alignCenter">A chess app with different game modes and an AI. Made in C# and WPF</p>
+
+                <div class="viewProjectBtnContainer">
+                    <span class="btn-expand" id="prj0" onclick="expandProject(this.id)">Expand</span>
+                </div>
+            </div>
+            <div class="project_cards-grid-item">
+                <div class="thumbnail">
+                    <img src="Assets/prj2Preview.PNG">
+                </div>
+                <p class="alignCenter">A bookmarker website which utilizes cookies to store bookmars permanently. Made with basic web dev kit</p>
+                <div class="viewProjectBtnContainer">
+                    <span class="btn-expand" id="prj1" onclick="expandProject(this.id)">Expand</span>
+                </div>
+
+            </div>
+            <div class="project_cards-grid-item">
+                <div class="thumbnail">
+                    <img src="Assets/prj3_preview.PNG">
+                </div>
+                <p class="alignCenter">A remake of a classical windows game: Minesweeper. Renovated with modern technology</p>
+                <div class="viewProjectBtnContainer">
+                    <span class="btn-expand" id="prj2" onclick="expandProject(this.id)">Expand</span>
+                </div>
+
+            </div>
+            <div class="project_cards-grid-item">
+                <div class="thumbnail">
+                    <img src="Assets/prj4_preview.PNG">
+                </div>
+
+                <p class="alignCenter">Anime and manga review comparison website. Lets you compare reviews and ratings from multiple sites on touch of one button</p>
+                <div class="viewProjectBtnContainer">
+                    <span class="btn-expand" id="prj3" onclick="expandProject(this.id)">Expand</span>
+                </div>
+            </div>
+            <div class="project_cards-grid-item">
+                <div class="thumbnail">
+                    <img src="Assets/prj5_preview.PNG">
+                </div>
+                <p class="alignCenter">This C# app solves linear optimisation problems via the algebraic approach: the Simplex method. It also shows all the tables that are used in the workings </p>
+                <div class="viewProjectBtnContainer">
+                    <span class="btn-expand" id="prj4" onclick="expandProject(this.id)">Expand</span>
+                </div>
+            </div>
+            <div class="project_cards-grid-item">
+                <div class="thumbnail">
+                    <img src="Assets/prj6_preview.PNG">
+                </div>
+                <p class="alignCenter">Static, front-end focused webpage that I designed to promote my tutoring services.</p>
+                <div class="viewProjectBtnContainer">
+                    <span class="btn-expand" id="prj5" onclick="expandProject(this.id)">Expand</span>
+                </div>
+
+            </div>
+            <div class="project_cards-grid-item">
+                <div class="thumbnail">
+                    <img src="Assets/prj7_preview.PNG">
+                </div>
+                <p class="alignCenter">Classical game of Tetris remade as a webpage. Now accessible through the convenience of a browser. Also includes new features</p>
+                <div class="viewProjectBtnContainer">
+                    <span class="btn-expand" id="prj6" onclick="expandProject(this.id)">Expand</span>
+                </div>
+
+            </div>
+            
+        </div>
+        
+
+
+
+
+
+
+      
+    </div>
+    
+</div>
+<div class="modall">
+<div class="close_container">
+    <span onclick="$('#wrapper').css('overflow-y','auto'); $('.modall').css('display','none')">&times;</span>
+</div>
+
+    <div style="display:flex; justify-content: center; align-items: center; flex-direction: column; width:100%; flex-grow:1;overflow: auto;">
+    
+        <div id="detailedPrjGrid" class="modall-content">
+            
+
+            
+            <div class="slide-show-container detailedPrjGrid-item" id="my-slide-show">
+                <div class="slide-show-image-container">
+                    <div class="right-slide-btn slide-show-btn">❯</div>
+                    <div class="left-slide-btn slide-show-btn">❮</div>
+                    <img style="margin-left:auto; margin-right:auto">
+                </div>
+                <div class="slide-show-dots-container">
+                    
+                </div>
+                
+                
+            </div>
+            
+
+
+
+            <div class="detailedPrjGrid-item">
+                <p class="alignCenter" style="font-size: calc(16px + 0.65vw)">Implemented using:</p>
+                <p class="alignCenter" id="implemented"></p>
+            </div>
+
+            <div class="detailedPrjGrid-item">
+                <p class="alignCenter" style="font-size: calc(16px + 0.65vw)">Features:</p>
+                <div class="featureGrid">
+
+                </div>
+
+
+
+            </div>
+
+            <div class="detailedPrjGrid-item" id="github_logo">
+                <p class="alignCenter" style="font-size: calc(16px + 0.65vw); margin-top:6px;">GitHub link:</p>
+                <div style="max-width: 100px; margin:auto">
+                    <a href="https://github.com/egorchern/Project_ChessWithInterface" target="_blank" id="githubLink">
+                        <img src="Assets/GitHubLogo.png">
+                    </a>
+
+                </div>
+
+            </div>
+            
+
+            <div class="detailedPrjGrid-item" id="descr" style="margin-top:40px">
+
+            </div>
+        </div>
+    </div>
+</div>

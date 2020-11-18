@@ -11,9 +11,7 @@
 @media (min-width: 740px) {
 
   
-  #experience {
-    width: 65%;
-  }
+  
 
   #github_logo {
     grid-column-start: 1;
@@ -83,9 +81,7 @@
 
 @media (max-width: 739.999px) {
 
-  #experience {
-    width: 95%;
-  }
+  
 
   .modall-content {
     
@@ -140,7 +136,8 @@ p{
 
 #experience {
 
-  max-width: 1062px;
+  max-width: 1192px;
+  
 }
 
 #navigation {
