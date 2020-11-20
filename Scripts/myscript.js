@@ -13,9 +13,10 @@ let x = window.matchMedia("(max-width: 739.999px)");
 slide_query(x);
 x.addListener(slide_query);
 function bind_ajax_requests(){
+    let pages_url = location.href + "Assets" + "/Pages";
     $.ajax({
         type: "GET",
-        url: "/Assets/Pages/about_myself.txt",
+        url: pages_url + "/about_myself.txt",
         
         success: function (response) {
             content_array[0] = response;
@@ -23,7 +24,7 @@ function bind_ajax_requests(){
     });
     $.ajax({
         type: "GET",
-        url: "/Assets/Pages/relevant_experience.txt",
+        url: pages_url + "/relevant_experience.txt",
         
         success: function (response) {
             content_array[1] = response;
@@ -31,7 +32,7 @@ function bind_ajax_requests(){
     });
     $.ajax({
         type: "GET",
-        url: "/Assets/Pages/projects.txt",
+        url: pages_url + "/projects.txt",
         
         success: function (response) {
             content_array[2] = response;
@@ -39,7 +40,7 @@ function bind_ajax_requests(){
     });
     $.ajax({
         type: "GET",
-        url: "/Assets/Pages/academics.txt",
+        url: pages_url + "/academics.txt",
         
         success: function (response) {
             content_array[3] = response;
