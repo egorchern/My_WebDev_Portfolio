@@ -72,6 +72,26 @@
                 </div>
 
             </div>
+            <div class="project_cards-grid-item">
+                <div class="thumbnail">
+                    <img src="Assets/prj8_preview.PNG">
+                </div>
+                <p class="alignCenter">A classicual game of Snake made playable in the browser.</p>
+                <div class="viewProjectBtnContainer">
+                    <span class="btn-expand" id="prj7" onclick="expandProject(this.id)">Expand</span>
+                </div>
+
+            </div>
+            <div class="project_cards-grid-item">
+                <div class="thumbnail">
+                    <img src="Assets/prj9_preview.PNG">
+                </div>
+                <p class="alignCenter">A dark themed webpage that allows easy note taking on YouTube videos, which are then autosaved.</p>
+                <div class="viewProjectBtnContainer">
+                    <span class="btn-expand" id="prj8" onclick="expandProject(this.id)">Expand</span>
+                </div>
+
+            </div>
             
         </div>
         
