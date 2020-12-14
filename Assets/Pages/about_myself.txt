@@ -7,13 +7,13 @@
             </p>
             <div style="display:flex;flex-flow: row wrap;justify-content: center;align-items: center;margin-top:5%;">
                 <div class="media_containers" data-refs="resume">
-                    <img src="Assets/Resume_picture.png"  style="max-height: inherit;">
+                    <img src="Assets/Resume_picture.webp"  style="max-height: inherit;">
                 </div >
                 <div class="media_containers" data-refs="email">
-                    <img src="Assets/email_picture.PNG"  style="max-height: inherit;">
+                    <img src="Assets/email_picture.webp"  style="max-height: inherit;">
                 </div >
                 <div class="media_containers" data-refs="phone">
-                    <img src="Assets/phone_picture.PNG"  style="max-height: inherit;">
+                    <img src="Assets/phone_picture.webp"  style="max-height: inherit;">
                 </div>
             </div>
             <div id="personal_profile">
@@ -31,7 +31,7 @@
                 <div class="books-grid-item">
 
                     <div class="books-grid-img">
-                        <img src="Assets/witcherIcon.jpg">
+                        <img src="Assets/witcherIcon.webp">
                     </div>
                 </div>
 
@@ -44,7 +44,7 @@
                 </div>
                 <div class="books-grid-item">
                     <div class="books-grid-img">
-                        <img src="Assets/1984Icon.jpg">
+                        <img src="Assets/1984Icon.webp">
                     </div>
                 </div>
                 <div class="books-grid-item">
@@ -56,7 +56,7 @@
                 </div>
                 <div class="books-grid-item">
                     <div class="books-grid-img">
-                        <img src="Assets/BraveNewWorldIcon.jpg">
+                        <img src="Assets/BraveNewWorldIcon.webp">
                     </div>
                 </div>
                 <div class="books-grid-item">

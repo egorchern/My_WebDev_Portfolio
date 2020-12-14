@@ -5,7 +5,7 @@
 
             <div class="project_cards-grid-item">
                 <div class="thumbnail">
-                    <img src="Assets/Prj1Preview.PNG">
+                    <img src="Assets/Prj1Preview.webp">
                 </div>
                 <p class="alignCenter">A chess app with different game modes and an AI. Made in C# and WPF</p>
 
@@ -15,7 +15,7 @@
             </div>
             <div class="project_cards-grid-item">
                 <div class="thumbnail">
-                    <img src="Assets/prj2Preview.PNG">
+                    <img src="Assets/prj2Preview.webp">
                 </div>
                 <p class="alignCenter">A bookmarker website which utilizes cookies to store bookmars permanently. Made with basic web dev kit</p>
                 <div class="viewProjectBtnContainer">
@@ -25,7 +25,7 @@
             </div>
             <div class="project_cards-grid-item">
                 <div class="thumbnail">
-                    <img src="Assets/prj3_preview.PNG">
+                    <img src="Assets/prj3_preview.webp">
                 </div>
                 <p class="alignCenter">A remake of a classical windows game: Minesweeper. Renovated with modern technology</p>
                 <div class="viewProjectBtnContainer">
@@ -35,7 +35,7 @@
             </div>
             <div class="project_cards-grid-item">
                 <div class="thumbnail">
-                    <img src="Assets/prj4_preview.PNG">
+                    <img src="Assets/prj4_preview.webp">
                 </div>
 
                 <p class="alignCenter">Anime and manga review comparison website. Lets you compare reviews and ratings from multiple sites on touch of one button</p>
@@ -45,7 +45,7 @@
             </div>
             <div class="project_cards-grid-item">
                 <div class="thumbnail">
-                    <img src="Assets/prj5_preview.PNG">
+                    <img src="Assets/prj5_preview.webp">
                 </div>
                 <p class="alignCenter">This C# app solves linear optimisation problems via the algebraic approach: the Simplex method. It also shows all the tables that are used in the workings </p>
                 <div class="viewProjectBtnContainer">
@@ -54,7 +54,7 @@
             </div>
             <div class="project_cards-grid-item">
                 <div class="thumbnail">
-                    <img src="Assets/prj6_preview.PNG">
+                    <img src="Assets/prj6_preview.webp">
                 </div>
                 <p class="alignCenter">Static, front-end focused webpage that I designed to promote my tutoring services.</p>
                 <div class="viewProjectBtnContainer">
@@ -64,7 +64,7 @@
             </div>
             <div class="project_cards-grid-item">
                 <div class="thumbnail">
-                    <img src="Assets/prj7_preview.PNG">
+                    <img src="Assets/prj7_preview.webp">
                 </div>
                 <p class="alignCenter">Classical game of Tetris remade as a webpage. Now accessible through the convenience of a browser. Also includes new features</p>
                 <div class="viewProjectBtnContainer">
@@ -74,7 +74,7 @@
             </div>
             <div class="project_cards-grid-item">
                 <div class="thumbnail">
-                    <img src="Assets/prj8_preview.PNG">
+                    <img src="Assets/prj8_preview.webp">
                 </div>
                 <p class="alignCenter">A classicual game of Snake made playable in the browser.</p>
                 <div class="viewProjectBtnContainer">
@@ -84,7 +84,7 @@
             </div>
             <div class="project_cards-grid-item">
                 <div class="thumbnail">
-                    <img src="Assets/prj9_preview.PNG">
+                    <img src="Assets/prj9_preview.webp">
                 </div>
                 <p class="alignCenter">A dark themed webpage that allows easy note taking on YouTube videos, which are then autosaved.</p>
                 <div class="viewProjectBtnContainer">
@@ -151,7 +151,7 @@
                 <p class="alignCenter" style="font-size: calc(16px + 0.65vw); margin-top:6px;">GitHub link:</p>
                 <div style="max-width: 100px; margin:auto">
                     <a href="https://github.com/egorchern/Project_ChessWithInterface" target="_blank" id="githubLink">
-                        <img src="Assets/GitHubLogo.png">
+                        <img src="Assets/GitHubLogo.webp">
                     </a>
 
                 </div>

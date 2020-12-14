@@ -8,7 +8,7 @@
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <p class="alignCenter">Name: Broad Oak High School</p>
                         <p class="alignCenter">Studied: 2015-2018</p>
-                        <img src="Assets/high_school_1.jpg">
+                        <img src="Assets/high_school_1.webp">
                     </div class="dropdown-menu">
                 </div>
             </div>
@@ -40,7 +40,7 @@
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <p class="alignCenter">Name: Bury College</p>
                         <p class="alignCenter">Studied: 2018-2020</p>
-                        <img src="Assets/bury_college_1.jpg">
+                        <img src="Assets/bury_college_1.webp">
                     </div class="dropdown-menu">
                 </div>
             </div>

@@ -13,7 +13,7 @@ let x = window.matchMedia("(max-width: 739.999px)");
 slide_query(x);
 x.addListener(slide_query);
 function bind_ajax_requests(){
-    let pages_url = location.href + "Assets" + "/Pages";
+    let pages_url = location.href + "/Assets" + "/Pages";
     $.ajax({
         type: "GET",
         url: pages_url + "/about_myself.txt",
@@ -164,15 +164,15 @@ function expandProject(prjID) {
         ["Dark theme", "Autosave", "Single-page", "Import && Export"]
     ];
     let slide_show_lists = [
-        ["Assets/prj1_slide1.PNG", "Assets/prj1_slide2.PNG", "Assets/prj1_slide3.PNG"],
-        ["Assets/prj2_slide1.PNG", "Assets/prj2_slide2.PNG", "Assets/prj2_slide3.PNG"],
-        ["Assets/prj3_slide1.PNG", "Assets/prj3_slide2.PNG", "Assets/prj3_slide3.PNG", "Assets/prj3_slide4.PNG"],
-        ["Assets/prj4_slide1.PNG", "Assets/prj4_slide2.PNG", "Assets/prj4_slide3.PNG"],
-        ["Assets/prj5_slide1.PNG", "Assets/prj5_slide2.PNG"],
-        ["Assets/prj6_slide1.PNG", "Assets/prj6_slide2.PNG","Assets/prj6_slide3.PNG" ],
-        ["Assets/prj7_slide1.PNG", "Assets/prj7_slide2.PNG"],
-        ["Assets/prj8_slide1.PNG", "Assets/prj8_slide2.PNG"],
-        ["Assets/prj9_slide1.PNG", "Assets/prj9_slide2.PNG", "Assets/prj9_slide3.PNG"]
+        ["Assets/prj1_slide1.webp", "Assets/prj1_slide2.webp", "Assets/prj1_slide3.webp"],
+        ["Assets/prj2_slide1.webp", "Assets/prj2_slide2.webp", "Assets/prj2_slide3.webp"],
+        ["Assets/prj3_slide1.webp", "Assets/prj3_slide2.webp", "Assets/prj3_slide3.webp", "Assets/prj3_slide4.webp"],
+        ["Assets/prj4_slide1.webp", "Assets/prj4_slide2.webp", "Assets/prj4_slide3.webp"],
+        ["Assets/prj5_slide1.webp", "Assets/prj5_slide2.webp"],
+        ["Assets/prj6_slide1.webp", "Assets/prj6_slide2.webp","Assets/prj6_slide3.webp" ],
+        ["Assets/prj7_slide1.webp", "Assets/prj7_slide2.webp"],
+        ["Assets/prj8_slide1.webp", "Assets/prj8_slide2.webp"],
+        ["Assets/prj9_slide1.webp", "Assets/prj9_slide2.webp", "Assets/prj9_slide3.webp"]
     ];
     var githubLinks = ["https://github.com/egorchern/Project_ChessWithInterface", "https://github.com/egorchern/bookmarker", "https://github.com/egorchern/minesweeper", "https://github.com/egorchern/Compare_flask", "https://github.com/egorchern/Simplex_Solver", "https://github.com/egorchern/MyTutor", "https://github.com/egorchern/Tetris", "https://github.com/egorchern/Snake"];
     var descriptions = [
