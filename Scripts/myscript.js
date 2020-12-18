@@ -137,7 +137,7 @@ function bind_left_slide_animation(selector) {
             "animation-name": "slide-in",
             "animation-duration": slide_animation_duration,
             "animation-fill-mode": "forwards",
-            "animation-timing-function": "cubic-bezier(0.175, 0.885, 0.32, 1.275)"
+            "animation-timing-function": "cubic-bezier(0.19, 1, 0.22, 1)"
 
         });
 
