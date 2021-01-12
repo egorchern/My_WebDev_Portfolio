@@ -125,8 +125,8 @@
 #detailedPrjGrid,
 .project_cards-grid-item,
 .page_item {
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
-  border: 2px solid rgba(0, 0, 0, 0.125);
+  border: 2px solid #DFE1E6;
+  /*border: 2px solid rgba(0, 0, 0, 0.125);*/
   border-radius: 0.45rem;
 }
 
