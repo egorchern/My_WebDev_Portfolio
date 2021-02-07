@@ -92,6 +92,26 @@
                 </div>
 
             </div>
+            <div class="project_cards-grid-item">
+                <div class="thumbnail">
+                    <img src="Assets/prj10_preview.webp">
+                </div>
+                <p class="alignCenter">Nought and Crosses made in React.JS and contains an unbetable AI</p>
+                <div class="viewProjectBtnContainer">
+                    <span class="btn-expand" id="prj9" onclick="expandProject(this.id)">Expand</span>
+                </div>
+
+            </div>
+            <div class="project_cards-grid-item">
+                <div class="thumbnail">
+                    <img src="Assets/prj11_preview.webp">
+                </div>
+                <p class="alignCenter">A website called GraphMaster that explores algorithms on graphs, all made via React.JS </p>
+                <div class="viewProjectBtnContainer">
+                    <span class="btn-expand" id="prj10" onclick="expandProject(this.id)">Expand</span>
+                </div>
+
+            </div>
             
         </div>
         
