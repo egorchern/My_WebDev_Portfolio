@@ -1,6 +1,7 @@
 var slide_animation_duration = "0.8s";
 let slide_show_index = 0;
 let slide_from_left = true;
+let selected_index = -1;
 function slide_query(x) {
     if (x.matches) { // If media query matches
       slide_animation_duration = "0.5s";
@@ -60,11 +61,6 @@ $(function () {
 });
 
 function load_content(id) {
-    let content_to_load = ``;
-    $('.modall').remove();
-    $('#main').remove();
-    $('#nav-list > li > span').removeClass("active");
-    $(`#${id} > span`).addClass("active");
     let index;
     if(id === "About_myself"){
         index = 0;
@@ -78,48 +74,58 @@ function load_content(id) {
     else if(id === "Academics"){
         index = 3;
     }
-    content_to_load = content_array[index];
-    if(content_to_load === null){
-        setTimeout(function(){load_content(id)}, 70);
-        return false;
-    }
-    $('main').prepend(content_to_load);
-    bind_left_slide_animation('#main');
-    $(function () {
-        $('.media_containers').bind("click", function(e){
-            $('#personal_profile').empty();
-            let refers = this.dataset.refs;
-            let content = ``;
-            if (refers === "resume"){
-                content = `
-                <div id="slide-down-container" style="display:none;position:relative;">
-                    <a href="https://drive.google.com/file/d/1oJ7tTAUINkz5HnmWAvJrA9KPFMmL_jON/view?usp=sharing" target='_blank'>Click to download my CV</a>
-                    <span style="font-size: 24px;position:absolute;right:5px;user-select: none;cursor:pointer" onclick="$('#slide-down-container').slideUp();">&times</span>
-                </div >
+    
+    if(index != selected_index){
+        let content_to_load = ``;
+        $('.modall').remove();
+        $('#main').remove();
+        $('#nav-list > li > span').removeClass("active");
+        $(`#${id} > span`).addClass("active");
+        
+        content_to_load = content_array[index];
+        if(content_to_load === null){
+            setTimeout(function(){load_content(id)}, 70);
+            return false;
+        }
+        selected_index = index;
+        $('main').prepend(content_to_load);
+        bind_left_slide_animation('#main');
+        $(function () {
+            $('.media_containers').bind("click", function(e){
+                $('#personal_profile').empty();
+                let refers = this.dataset.refs;
+                let content = ``;
+                if (refers === "resume"){
+                    content = `
+                    <div id="slide-down-container" style="display:none;position:relative;">
+                        <a href="https://drive.google.com/file/d/1oJ7tTAUINkz5HnmWAvJrA9KPFMmL_jON/view?usp=sharing" target='_blank'>Click to download my CV</a>
+                        <span style="font-size: 24px;position:absolute;right:5px;user-select: none;cursor:pointer" onclick="$('#slide-down-container').slideUp();">&times</span>
+                    </div >
 
-                `;
-                
-            }
-            else if(refers === "email"){
-                content = `
-                <div id="slide-down-container" style="display:none;position:relative;">
-                    <span>egorch.formal@gmail.com</span>
-                    <span style="font-size: 24px;position:absolute;right:5px;user-select: none;cursor:pointer" onclick="$('#slide-down-container').slideUp();">&times</span>
-                </div >
-                `
-            }
-            else if(refers === "phone"){
-                content = `
-                <div id="slide-down-container" style="display:none;position:relative;">
-                    <span>+447827986635</span>
-                    <span style="font-size: 24px;position:absolute;right:5px;user-select: none;cursor:pointer" onclick="$('#slide-down-container').slideUp();">&times</span>
-                </div >
-                `
-            }
-            $('#personal_profile').append(content);
-            $('#slide-down-container').slideDown();
+                    `;
+                    
+                }
+                else if(refers === "email"){
+                    content = `
+                    <div id="slide-down-container" style="display:none;position:relative;">
+                        <span>egorch.formal@gmail.com</span>
+                        <span style="font-size: 24px;position:absolute;right:5px;user-select: none;cursor:pointer" onclick="$('#slide-down-container').slideUp();">&times</span>
+                    </div >
+                    `
+                }
+                else if(refers === "phone"){
+                    content = `
+                    <div id="slide-down-container" style="display:none;position:relative;">
+                        <span>+447827986635</span>
+                        <span style="font-size: 24px;position:absolute;right:5px;user-select: none;cursor:pointer" onclick="$('#slide-down-container').slideUp();">&times</span>
+                    </div >
+                    `
+                }
+                $('#personal_profile').append(content);
+                $('#slide-down-container').slideDown();
+            });
         });
-    });
+    }
 }
 
 function bind_left_slide_animation(selector) {
@@ -224,7 +230,7 @@ function expandProject(prjID) {
 }
 
 function close_modall(){
-    console.log("called");
+    
     let element = document.querySelector(".modall-content");
     element.classList.toggle("out");
     setTimeout(() => {
