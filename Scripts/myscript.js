@@ -200,6 +200,7 @@ function expandProject(prjID) {
         image_sources = slide_show_lists[num];
         reset_slideshow("my-slide-show");
         load_slideshow("my-slide-show");
+        document.querySelector(".modall-content").classList.toggle("out");
         $('.modall').css("display", "flex");
         $("#implemented").html(implementedStrings[num]);
         var featureList = featuresForProjects[num];
@@ -220,6 +221,18 @@ function expandProject(prjID) {
 
 
 
+}
+
+function close_modall(){
+    console.log("called");
+    let element = document.querySelector(".modall-content");
+    element.classList.toggle("out");
+    setTimeout(() => {
+        element = document.querySelector(".modall");
+        element.style.display = "none";
+        $('#wrapper').css("overflow-y","auto");
+    }, 500);
+    
 }
 
 function reset_slideshow(id) {

@@ -611,6 +611,11 @@ picture {
   display: grid;
   animation-name: zoom;
   animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+.modall-content.out{
+  animation-name: zoom_out;
+  
 }
 
 @keyframes zoom {
@@ -620,6 +625,13 @@ picture {
 
   to {
     transform: scale(1);
+  }
+}
+
+@keyframes zoom_out{
+  100%{
+    transform: scale(0);
+    display: none;
   }
 }
 

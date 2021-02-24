@@ -127,12 +127,12 @@
 </div>
 <div class="modall">
 <div class="close_container">
-    <span onclick="$('#wrapper').css('overflow-y','auto'); $('.modall').css('display','none')">&times;</span>
+    <span onclick="close_modall()">&times;</span>
 </div>
 
     <div style="display:flex; justify-content: center; align-items: center; flex-direction: column; width:100%; flex-grow:1;overflow: auto;">
     
-        <div id="detailedPrjGrid" class="modall-content">
+        <div id="detailedPrjGrid" class="modall-content out">
             
 
             
