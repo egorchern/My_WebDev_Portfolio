@@ -106,9 +106,29 @@
                 <div class="thumbnail">
                     <img src="Assets/prj11_preview.webp">
                 </div>
-                <p class="alignCenter">A website called GraphMaster that explores algorithms on graphs, all made via React.JS </p>
+                <p class="alignCenter">A website called GraphMaster that explores algorithms on graphs, all made via React.js </p>
                 <div class="viewProjectBtnContainer">
                     <span class="btn-expand" id="prj10" onclick="expandProject(this.id)">Expand</span>
+                </div>
+
+            </div>
+            <div class="project_cards-grid-item">
+                <div class="thumbnail">
+                    <img src="Assets/prj12_preview.webp">
+                </div>
+                <p class="alignCenter">A small 2D browser game that is focused on avoiding/destroying asteroids and enemy ships </p>
+                <div class="viewProjectBtnContainer">
+                    <span class="btn-expand" id="prj11" onclick="expandProject(this.id)">Expand</span>
+                </div>
+
+            </div>
+            <div class="project_cards-grid-item">
+                <div class="thumbnail">
+                    <img src="Assets/prj13_preview.webp">
+                </div>
+                <p class="alignCenter">A browser real-time messaging app powered by Express, Node.js and React.js</p>
+                <div class="viewProjectBtnContainer">
+                    <span class="btn-expand" id="prj12" onclick="expandProject(this.id)">Expand</span>
                 </div>
 
             </div>
