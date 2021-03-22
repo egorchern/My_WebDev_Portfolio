@@ -171,7 +171,7 @@ function expandProject(prjID) {
         ["Single page", "Reactful", "AI"],
         ["No libraries used for graphing or algorithms", "Responsive design", "Efficient algorithms"],
         ["No libraries", "Scaling difficulty", "Upgrade system"],
-        ["Responsive", "Real-time", "Fast response time"]
+        ["Authentication system", "Secure", "Responsive", "Real-time"]
     ];
     let slide_show_lists = [
         ["Assets/prj1_slide1.webp", "Assets/prj1_slide2.webp", "Assets/prj1_slide3.webp"],
@@ -202,7 +202,7 @@ function expandProject(prjID) {
         "You can have a look at the website by clicking <a href='https://egorchern.github.io/Nought_and_Crosses_React/' target='_black'>here</a><br></br>This is the website I made when I started using React.js, it is a simple Nought-and-Crosses game with an AI made with Minimax algorithm. Due to simple complexity of the game, the AI is unbetable. Game can be quickly restarted by pressing R when the current game has ended.",
         "You can have a look at the website by clicking <a href='https://egorchern.github.io/GraphMaster/' target='_black'>here</a><br></br>I mainly did this website to improve my skills in React and to check myself when doing exam questions on graph algorithms for Further maths. This website is centered around creating and using algorithms on graphs. The GUI allows for easy creation of graphs with modern front-end design. Graphs can be visially examined after creation, this is achieved via HTML5 canvas. Nodes are positioned in n-gon using mathematical calculations. Algorithms can then be executed on the graph, and relevant edges highlighted to show the path.",
         "You can have a look at the website by clicking <a href='https://egorchern.github.io/Start_warriors/' target='_black'>here</a><br></br>This is another browser game made using HTML5 canvas. You move with standard controls of W,A,S,D and the ship shoots bullets automatically based on your attack rate. The goal is to get as high of a score as you can. I've always liked games similar to this one, where the difficulty as well as your strength scale with time, and you try to get as high of a score as possible. This game uses OOP to optimise the readability and code length.",
-        "You can have a look at the website by clicking <a href='https://real-message.herokuapp.com/' target='_black'>here</a><br></br>This is the website I've made to practice my node.js. I've learnt fundamentals and proceeded to Express library that is very similar to Flask in Python. This website uses SocketIO and React, which allows it to be quite fast and efficient. Message history is stored in a Postgres DB via Heroku addon."
+        "You can have a look at the website by clicking <a href='https://real-message.herokuapp.com/' target='_black'>here</a><br></br>This is the website I've made to practice my node.js. I've learnt fundamentals and proceeded to Express library that is very similar to Flask in Python. This website uses SocketIO and React, which allows it to be quite fast and efficient. Message history is stored in a Postgres DB via Heroku addon. Authentication is done via auth tokens in cookies that are also stored in a Postgres DB. Allows one user to be logged in on different devices."
     ];
 
     $(document).ready(function () {
