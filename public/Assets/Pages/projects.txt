@@ -136,7 +136,7 @@
                 <div class="thumbnail">
                     <img src="Assets/prj13_preview.webp">
                 </div>
-                <p class="alignCenter">A large scale, real-time quiz website with extended registered user functionality. Made with React and Express.js</p>
+                <p class="alignCenter">A large scale, real-time quiz website with React and Express.js</p>
                 <div class="viewProjectBtnContainer">
                     <span class="btn-expand" id="prj13" onclick="expandProject(this.id)">Expand</span>
                 </div>
